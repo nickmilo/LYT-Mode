@@ -41,7 +41,7 @@ Nick and Cecilia May crossed paths in a LYT Workshop. At the same time, Cecilia 
    - Gradient for Highlight  
    - Magenta for Links  
    - Green for Tags
-   - Different Colored Headers  
+   - Different Colored Headers
 - Tighter sidebar item line-height to allow you to see more notes, tags, and links  
 - Grayed out markdown formatting  
 - Bigger Popovers  
