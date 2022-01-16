@@ -86,6 +86,7 @@ Content / Active Note
         Mermaid JS (Diagram Generator)
         Markdown Table
         YAML/Metadata
+        Flashing Text (upon Search)
     Slides
     Publish
 
@@ -634,7 +635,7 @@ Custom Icons
 
 --color-purple: var(--color-purple-500);
 --color-purple-300: hsl(255, 49%, 76%);
---color-purple-500: hsl(255, 100%, 87%);
+--color-purple-500: hsl(255, 100%, 86%);
 --color-purple-700: hsl(260, 100%, 79%);
 --color-purple-900: hsl(263, 46%, 61%);
 --color-purple-910: hsl(263, 37%, 69%);
@@ -1362,6 +1363,8 @@ div.search-result-container
     background: var(--color-highlight-gradient);
     filter: drop-shadow(var(--color-highlight-shadow));
     border-radius: var(--scale-2-1);
+    padding-left: 1px;
+    padding-right: 1px;
 }
 
 /*────────────────────────────────────
@@ -1649,9 +1652,9 @@ Content / Active Note / Opened Notes
     --md-color-text-muted: var(--color-cyan-700);
     --md-color-text-faint: var(--color-cyan-900);
 
-    --md-color-bold: var(--color-purple-700);
-    --md-color-italic: var(--color-yellow-500);
-    --md-color-bolditalic: var(--color-slate-300);
+    --md-color-bold: var(--color-yelow-500);
+    --md-color-italic: var(--color-purple-500);
+    --md-color-bolditalic: var(--color-gray-10);
     --md-color-strikethrough: var(--text-faint);
 
     --md-color-highlight-text: var(--color-highlight-text);
@@ -1974,36 +1977,37 @@ span.cm-quote.cm-formatting.cm-strikethrough {
 .cm-s-obsidian span.cm-hmd-footnote.cm-link,
 .cm-s-obsidian span.cm-blockid,
 a,
+.cm-s-obsidian span.cm-url:hover,
+.cm-s-obsidian span.cm-link:hover,
+.cm-s-obsidian span.cm-link span.cm-underline:hover,
+.cm-s-obsidian span.cm-hmd-internal-link:hover,
+.cm-s-obsidian span.cm-hmd-internal-link span.cm-underline:hover,
+.cm-s-obsidian span.cm-hmd-footnote.cm-link:hover,
+.cm-s-obsidian span.cm-blockid:hover,
 .markdown-preview-view a.internal-link,
 .markdown-preview-view a.external-link {
     text-decoration: none;
     color: var(--md-color-link);
 }
 
+
 .cm-s-obsidian span.cm-url:hover,
 .cm-s-obsidian span.cm-link:hover,
 .cm-s-obsidian span.cm-link span.cm-underline:hover,
 .cm-s-obsidian span.cm-hmd-internal-link:hover,
-.cm-s-obsidian span.cm-hmd-internal-link 
-span.cm-underline:hover,
+.cm-s-obsidian span.cm-hmd-internal-link span.cm-underline:hover,
 .cm-s-obsidian span.cm-hmd-footnote.cm-link:hover,
 .cm-s-obsidian span.cm-blockid:hover,
-a:hover,
+a:hover {
+    text-decoration: none;
+}
+
 .markdown-preview-view a.internal-link:hover,
 .markdown-preview-view a.external-link:hover {
     text-decoration: none;
     color: var(--md-color-link-hover);
 }
 
-.cm-s-obsidian span.cm-url:active,
-.cm-s-obsidian span.cm-link:active,
-.cm-s-obsidian span.cm-link span.cm-underline:active,
-.cm-s-obsidian span.cm-hmd-internal-link:active,
-.cm-s-obsidian span.cm-hmd-internal-link 
-span.cm-underline:active,
-.cm-s-obsidian span.cm-hmd-footnote.cm-link:active,
-.cm-s-obsidian span.cm-blockid:active,
-a:active,
 .markdown-preview-view a.internal-link:active,
 .markdown-preview-view a.external-link:active {
     text-decoration: none;
@@ -2095,12 +2099,10 @@ span.cm-quote.cm-strikethrough {
     color: var(--md-color-tag);
 }
 
-.cm-s-obsidian span.cm-hashtag:hover,
 .tag:hover {
     color: var(--md-color-tag-hover);
 }
 
-.cm-s-obsidian span.cm-hashtag:active,
 .tag:active {
     color: var(--md-color-tag-active);
 }
@@ -2113,7 +2115,6 @@ li::marker {
     color: var(--color-purple-910);
     font-size: calc(1px + var(--font-scale-0));
     font-variant-numeric: tabular-nums;
-    font-family: var(--font-code);
     font-weight: var(--font-bold);
     text-align: left;
     vertical-align: 0px;
@@ -2449,7 +2450,7 @@ span.cm-inline-code:not(.cm-formatting-code) {
     border-top: none;
     border-right: none;
     border-bottom: none;
-    border-left: 4px solid var(--color-purple-910);
+    border-left: 2px solid var(--color-purple-910);
     outline: 1px solid var(--md-color-border);
     box-shadow: 0px 4px 6px -1px var(--shadow-xsm);
     transition: var(--duration-moderate-1)
@@ -2476,7 +2477,7 @@ span.cm-inline-code:not(.cm-formatting-code) {
 }
 
 .markdown-embed:not(.popover.hover-popover.is-loaded .markdown-embed):hover {
-    border-left: 4px solid var(--color-purple-500);
+    border-left: 2px solid var(--color-purple-500);
     box-shadow: var(--shadow-m);
     transform: translate3d(0, -4px, 0);
     transition: var(--duration-moderate-1)
@@ -2494,6 +2495,10 @@ span.cm-inline-code:not(.cm-formatting-code) {
 .markdown-embed-link {
     top: var(--scale-2-2);
     right: var(--scale-2-2);
+}
+
+.markdown-embed-link:hover {
+    color: var(--md-color-link);
 }
 
 /*──────────Live Preview Embed──────────*/
@@ -2673,6 +2678,22 @@ span.frontmatter-section-label {
     box-shadow: 0px 2px 0px 0px
                 var(--shadow-xsm) inset,
                 0px 0px 1px 0px var(--shadow-xsm);
+}
+
+/*────────────────────────────────────
+    Flashing Text (upon Search)
+────────────────────────────────────*/
+
+.cm-s-obsidian span.obsidian-search-match-highlight,
+.is-flashing * {
+    background-color: initial;
+
+    color: var(--color-highlight-text) !important;
+    background: var(--color-highlight-gradient);
+    filter: drop-shadow(var(--color-highlight-shadow));
+    border-radius: var(--scale-2-1);
+    padding-left: 1px;
+    padding-right: 1px;
 }
 
 /*────────────────────────────────────
@@ -3511,7 +3532,9 @@ pre button.copy-code-button {
         Search Input Component
 ────────────────────────────────────*/
 
-input[type='text']:not(.graph-controls input) {
+input[type='text']:not(.graph-controls input, 
+.document-search input.document-search-input,
+.document-replace input.document-replace-input) {
     min-width: 100%;
     width: 215px;
     padding:    var(--scale-2-2)
@@ -5830,7 +5853,7 @@ body:not(.no-custom-icons) svg.file-explorer-glyph {
 
 /* Filled Pin */
 body:not(.no-custom-icons) svg.filled-pin {
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 24 24' style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'%3E%3Cpath d='m12 22 1-2v-3h5a1 1 0 0 0 1-1v-1.586c0-.526-.214-1.042-.586-1.414L17 11.586V8a1 1 0 0 0 1-1V4c0-1.103-.897-2-2-2H8c-1.103 0-2 .897-2 2v3a1 1 0 0 0 1 1v3.586L5.586 13A2.01 2.01 0 0 0 5 14.414V16a1 1 0 0 0 1 1h5v3l1 2zM8 4h8v2H8V4zM7 14.414l1.707-1.707A.996.996 0 0 0 9 12V8h6v4c0 .266.105.52.293.707L17 14.414V15H7v-.586z'%3E%3C/path%3E%3C/svg%3E");
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 24 24' style='fill: rgb(0, 0, 0); --darkreader-inline-fill: %23e8e6e3;' data-darkreader-inline-fill=''%3E%3Cpath d='M15 11.586V6h2V4a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2h2v5.586l-2.707 1.707A.996.996 0 0 0 6 14v2a1 1 0 0 0 1 1h4v3l1 2 1-2v-3h4a1 1 0 0 0 1-1v-2a.996.996 0 0 0-.293-.707L15 11.586z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 /* Folder */
