@@ -4,7 +4,7 @@
 
 LYT Mode is for "Linking Your Thinking". It invokes sensemaking and lateral thinking.
 
-It was designed by Cecilia May on commission from Nick Milo for the purpose of evolving his Cybertron theme.
+It was designed by **Cecilia May** (https://github.com/ceciliamay) on commission from Nick Milo for the purpose of evolving his Cybertron theme.
 
 ## Note from Nick
 
@@ -20,7 +20,7 @@ I do both my creative and analytical work in LYT Mode.
 
 This theme is meant to be the definitive evolution of my first love: the [[Cybertron Theme]]. 
 
-Nick and Cecilia May ( @ceciliamay ) crossed paths in a LYT Workshop. At the same time, Cecilia was designing the winner of Obsidian's 2021 Theme of the Year with the now legendary theme called "Primary". Before the winner was known, Nick reached out to the public for help to take Cybertron to the next level. It was going to take more CSS & Design skill than what he could muster. Luckily, Cecilia raised her hand. Then Nick commissioned Cecilia May to design LYT Mode and this is the result.
+Nick and **Cecilia May** ( https://github.com/ceciliamay ) crossed paths in a LYT Workshop. At the same time, Cecilia was designing the winner of Obsidian's 2021 Theme of the Year with the now legendary theme called "Primary". Before the winner was known, Nick reached out to the public for help to take Cybertron to the next level. It was going to take more CSS & Design skill than what he could muster. Luckily, Cecilia raised her hand. Then Nick commissioned Cecilia May to design LYT Mode and this is the result.
 
 ## Supported Plugins
 
