@@ -4935,6 +4935,11 @@ body.plugin-sliding-panes-rotate-header
                 Kanban
 ────────────────────────────────────*/
 
+/* remove scroll bar on cards */
+.kanban-plugin__markdown-preview-view > div > * {
+  overflow: hidden;
+}
+
 .view-content .kanban-plugin {
     background: var(--background-primary);
 }
