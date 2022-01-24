@@ -1800,52 +1800,40 @@ Content / Active Note / Opened Notes
 .cm-header-1,
 .markdown-preview-view h1,
 .markdown-preview-view h1 code {
-    background: var(--color-yellow-gradient-1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--color-yellow);
     filter: drop-shadow(var(--header-shadow-size) var(--header-shadow-color));
 }
 
 .cm-header-2,
 .markdown-preview-view h2,
 .markdown-preview-view h2 code {
-    background: var(--color-purple-gradient-1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--color-purple);
     filter: drop-shadow(var(--header-shadow-size) var(--header-shadow-color));
 }
 
 .cm-header-3,
 .markdown-preview-view h3,
 .markdown-preview-view h3 code {
-    background: var(--color-cyan-gradient-3);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--color-cyan);
     filter: drop-shadow(var(--header-shadow-size) var(--header-shadow-color));
 }
 
 .cm-header-4,
 .markdown-preview-view h4,
 .markdown-preview-view h4 code {
-    background: var(--color-green-gradient-1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--color-green);
 }
 
 .cm-header-5,
 .markdown-preview-view h5,
 .markdown-preview-view h6 code {
-    background: var(--color-slate-gradient-1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--color-slate);
 }
 
 .cm-header-6,
 .markdown-preview-view h6,
 .markdown-preview-view h6 code {
-    background: var(--color-slate-gradient-2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--color-slate);
 }
 
 /*──────────Emphasis──────────*/
