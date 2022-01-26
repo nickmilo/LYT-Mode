@@ -1652,7 +1652,7 @@ Content / Active Note / Opened Notes
     --md-color-text-muted: var(--color-cyan-700);
     --md-color-text-faint: var(--color-cyan-900);
 
-    --md-color-bold: var(--color-yelow-500);
+    --md-color-bold: var(--color-yellow-500);
     --md-color-italic: var(--color-purple-500);
     --md-color-bolditalic: var(--color-gray-10);
     --md-color-strikethrough: var(--text-faint);
