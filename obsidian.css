@@ -2,22 +2,33 @@
 
 L Y T  M O D E
 
-Obsidian Theme v2.0
+Obsidian Theme v1.1
 
 by Cecilia May (commissioned by Nick Milo)
 
 ────────────────────────────────────
 
+LYT Mode is for "Linking Your Thinking".
+It invokes sensemaking and lateral thinking.
 
+It was designed by Cecilia May (https://github.com/ceciliamay)
+on commission from Nick Milo for
+the purpose of evolving his Cybertron theme.
+
+Note from Nick:
+This is where I do my sensemaking: in LYT Mode.
+That stands for: "Linking Your Thinking" Mode.
+LYT Mode is meant to encourage sensemaking and lateral thinking.
+I do both my creative and analytical work in LYT Mode.
 
 ────────────────────────────────────
 
 Support
-my Work: 
+Cecilia's Work: https://ko-fi.com/ceciliamay
 
-README: 
+README: https://github.com/nickmilo/LYT-Mode
 
-License:
+License: MIT License
 
 Icons: Boxicons
 
@@ -124,6 +135,7 @@ Community Plugins
     Sliding Pane (Andy's Mode) by death_au
     Kanban by mgmeyers
     Excalidraw by Zsolt Viczian
+    Dataview by Michael Brenan
 
 Custom Icons
 
@@ -1917,6 +1929,8 @@ Content / Active Note / Opened Notes
 
 /*──────────Markdown Formatting──────────*/
 span.cm-formatting:not(.cm-header),
+.cm-s-obsidian span.cm-comment-start,
+.cm-s-obsidian span.cm-comment-end,
 .cm-s-obsidian span.cm-formatting-math.cm-keyword,
 .cm-s-obsidian span.cm-formatting-link.cm-link,
 .cm-s-obsidian span.cm-formatting-escape,
@@ -2231,7 +2245,7 @@ ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul {
 input[type=checkbox] {
     -webkit-appearance: none;
     background: var(--color-black);
-    margin-bottom: 6px;
+    vertical-align: middle;
     border: 1px solid var(--md-color-border);
     border-radius: var(--scale-2-1);
     box-shadow: 0px 1px 0px var(--shadow-xsm);
@@ -3487,7 +3501,8 @@ pre button.copy-code-button {
 .theme-light .modal button:not(.mod-cta):not(.mod-warning),
 .theme-light .workspace button:not(.graph-controls button, .excalidraw button),
 .theme-dark .modal button:not(.mod-cta):not(.mod-warning),
-.theme-dark .workspace button:not(.graph-controls button, .excalidraw button) {
+.theme-dark .workspace button:not(.graph-controls button, .excalidraw button),
+.markdown-source-view.mod-cm6 .edit-block-button {
     color: var(--color-white);
     background: var(--color-purple-900);
     border: 1px solid var(--border-xsm);
@@ -3501,7 +3516,8 @@ pre button.copy-code-button {
 .theme-dark .modal button:not(.mod-cta):not(.mod-warning):focus,
 .theme-dark .workspace button:not(.graph-controls button):focus,
 .theme-dark .modal button:not(.mod-cta):not(.mod-warning):hover,
-.theme-dark .workspace button:not(.graph-controls button, .excalidraw button):hover {
+.theme-dark .workspace button:not(.graph-controls button, .excalidraw button):hover,
+.markdown-source-view.mod-cm6 .edit-block-button:hover {
     background: var(--color-purple-700);
 }
 
@@ -3520,12 +3536,17 @@ pre button.copy-code-button {
 .theme-dark .modal button:active,
 .theme-dark .modal button:not(.mod-cta):not(.mod-warning):active,
 .theme-dark .workspace button:not(.graph-controls button, .excalidraw button):active,
-.theme-dark .graph-controls button:active {
+.theme-dark .graph-controls button:active,
+.markdown-source-view.mod-cm6 .edit-block-button:active {
     box-shadow: 0px 1px 0px 0px
                 var(--shadow-xsm) inset,
                 0px 0px 1px 0px var(--shadow-xsm);
     transition: var(--duration-fast-1)
                 var(--motion-smooth);
+}
+
+.markdown-source-view.mod-cm6 .edit-block-button {
+    border-radius: var(--scale-2-1);
 }
 
 /*────────────────────────────────────
@@ -4895,18 +4916,22 @@ body.plugin-sliding-panes-rotate-header
     border-right: none !important;
 }
 
-.plugin-sliding-panes-rotate-header .mod-root
-> .workspace-leaf.mod-active {
+.plugin-sliding-panes-rotate-header
+.workspace .mod-root
+.workspace-leaf.mod-active
+.workspace-leaf-content .view-header {
     border-left: var(--scale-2-2) 
                 solid 
-                var(--color-yellow-700);
+                var(--color-yellow-700) !important;
 }
 
-.plugin-sliding-panes-rotate-header .mod-root
-> .workspace-leaf:not(.workspace-leaf.mod-active) {
+.plugin-sliding-panes-rotate-header
+.workspace .mod-root
+.workspace-leaf:not(.workspace-leaf.mod-active)
+.workspace-leaf-content .view-header {
     border-left: 1px 
                 solid 
-                var(--color-gray-70);
+                var(--color-gray-70) !important;
 }
 
 .plugin-sliding-panes:not(.plugin-sliding-panes-rotate-header)
@@ -5289,6 +5314,113 @@ body:not(.no-custom-icons) svg.save-svg {
 body.hider-frameless .workspace-split.mod-left-split >
 .workspace-tabs {
     padding-top: 0;
+}
+
+/*────────────────────────────────────
+                Dataview
+────────────────────────────────────*/
+/* Dataview Tables */
+/* Source View */
+.markdown-source-view.mod-cm6 
+.dataview.table-view-table {
+    background: var(--background-modifier-border);
+}
+
+.markdown-source-view.mod-cm6 
+.dataview.table-view-table thead, 
+.markdown-source-view.mod-cm6 
+.dataview.table-view-table tr, 
+.markdown-source-view.mod-cm6 
+.dataview.table-view-table td, .markdown-source-view.mod-cm6 
+.dataview.table-view-table th {
+    padding: 4px 10px;
+}
+
+.markdown-source-view.mod-cm6 
+.dataview.table-view-table thead {
+    border: none;
+    margin: 0;
+}
+
+.markdown-source-view.mod-cm6 
+.dataview.table-view-table 
+thead.table-view-thead tr th {
+    font-size: var(--font-scale-1);
+    border-bottom: none;
+    color: var(--md-color-code-white);
+    background: var(--background-secondary);
+}
+
+.markdown-source-view.mod-cm6 
+.dataview.table-view-table 
+.table-view-tbody tr {
+    background: var(--background-primary);
+}
+
+.markdown-source-view.mod-cm6 
+.dataview.table-view-table 
+.table-view-tbody tr:nth-child(even) {
+    background: hsl(225, 13%, 18%);
+    /* Derived from Color Picking MD Tables rendered in Preview, Alpha colors don't work as should */
+}
+
+.markdown-source-view.mod-cm6 
+.dataview.table-view-table 
+.table-view-tbody td:not(td:last-of-type) {
+    padding: 4px 10px;
+}
+
+.markdown-source-view.mod-cm6 .dataview.table-view-table ul.dataview-ul {
+    list-style: none;
+}
+
+/* Preview View */
+.markdown-preview-view
+.dataview.table-view-table {
+    border: 1px solid var(--background-modifier-border);
+}
+
+.markdown-preview-view 
+.dataview.table-view-table > thead > tr > th {
+    font-size: var(--font-scale-1);
+    border-width: 0px;
+    border-bottom: 1px solid var(--background-modifier-border);
+    border-right: 1px solid var(--background-modifier-border);
+}
+
+.markdown-preview-view 
+.dataview.table-view-table .table-view-tbody tr {
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.markdown-preview-view 
+.dataview.table-view-table .table-view-tbody td {
+    padding: 4px 10px;
+    border-right: 1px solid var(--background-modifier-border);
+}
+
+.markdown-preview-view 
+.dataview.table-view-table ul.dataview-ul {
+    list-style: none;
+}
+
+/* Dataview Task List */
+.markdown-source-view.mod-cm6 .cm-embed-block .block-language-dataview h4 {
+    margin: 15px 0;
+}
+
+.markdown-source-view.mod-cm6 .cm-embed-block .block-language-dataview h4:first-of-type {
+    margin-top: 0;
+}
+
+.markdown-source-view.mod-cm6 .cm-embed-block .block-language-dataview .dataview.result-group input.task-list-item-checkbox {
+    margin-right: var(--scale-2-3);
+}
+
+/* Dataview List */
+.markdown-source-view.mod-cm6 .cm-embed-block .block-language-dataview ul.dataview.list-view-ul {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /*────────────────────────────────────
