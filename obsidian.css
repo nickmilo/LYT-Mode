@@ -2245,7 +2245,7 @@ ul ul ul ul ul ul ul ul ul ul ul ul ul ul ul {
 input[type=checkbox] {
     -webkit-appearance: none;
     background: var(--color-black);
-    vertical-align: middle;
+    margin-bottom: 6px;
     border: 1px solid var(--md-color-border);
     border-radius: var(--scale-2-1);
     box-shadow: 0px 1px 0px var(--shadow-xsm);
