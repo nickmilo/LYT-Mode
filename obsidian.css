@@ -2274,6 +2274,13 @@ ul.contains-task-list {
     padding-left: var(--scale-8-3);
 }
 
+/* Markdown Checkboxes in Preview Fix */
+.markdown-preview-view input[type=checkbox] {
+    margin-top: 0;
+    margin-bottom: 2px;
+    vertical-align: middle;
+}
+
 /*──────────Inline Code/Codeblocks──────────*/
 
 pre code[class*="language-"].is-loaded {
