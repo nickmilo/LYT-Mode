@@ -2277,8 +2277,7 @@ ul.contains-task-list {
 /* Markdown Checkboxes in Preview Fix */
 .markdown-preview-view input[type=checkbox] {
     margin-top: 0;
-    margin-bottom: 2px;
-    vertical-align: middle;
+    margin-bottom: 0;
 }
 
 /*──────────Inline Code/Codeblocks──────────*/
