@@ -2041,7 +2041,7 @@ body.lyt-gradient-text-highlights .cm-header.cm-formatting-highlight {
 }
 
 /* Safe Mode Highlights */
-body.lyt-gradient-bg-highlights .cm-s-obsidian span.cm-highlight,
+body.lyt-gradient-bg-highlights .cm-s-obsidian span.cm-highlight:not(span.cm-highlight.cm-inline-code),
 body.lyt-gradient-bg-highlights .markdown-preview-view mark,
 body.lyt-gradient-bg-highlights .cm-s-obsidian .cm-strong,
 body.lyt-gradient-bg-highlights .markdown-preview-view strong,
