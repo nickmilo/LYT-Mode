@@ -2041,12 +2041,12 @@ body.lyt-gradient-text-highlights .cm-header.cm-formatting-highlight {
 }
 
 /* Safe Mode Highlights */
-body.lyt-gradient-bg-highlights .cm-s-obsidian span.cm-highlight:not(span.cm-highlight.cm-inline-code),
+body.lyt-gradient-bg-highlights .cm-s-obsidian span.cm-highlight:not(.cm-highlight.cm-inline-code),
 body.lyt-gradient-bg-highlights .markdown-preview-view mark,
-body.lyt-gradient-bg-highlights .cm-s-obsidian .cm-strong,
-body.lyt-gradient-bg-highlights .markdown-preview-view strong,
-body.lyt-gradient-bg-highlights .cm-s-obsidian .cm-em,
-body.lyt-gradient-bg-highlights .markdown-preview-view em {
+body.lyt-gradient-bg-highlights .cm-s-obsidian .cm-highlight.cm-strong,
+body.lyt-gradient-bg-highlights .markdown-preview-view mark strong,
+body.lyt-gradient-bg-highlights .cm-s-obsidian .cm-highlight.cm-em,
+body.lyt-gradient-bg-highlights .markdown-preview-view mark em {
     -webkit-background-clip: initial;
     -webkit-text-fill-color: initial;
 
