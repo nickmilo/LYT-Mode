@@ -136,6 +136,7 @@ Community Plugins
     Kanban by mgmeyers
     Excalidraw by Zsolt Viczian
     Dataview by Michael Brenan
+    Style Settings by mgmeyers
 
 Custom Icons
 
@@ -570,6 +571,7 @@ Custom Icons
 --color-cyan-510: hsl(191, 65%, 59%); /* Nick's BrighterCyberCyan */
 --color-cyan-520: hsl(191, 57%, 59%); /* Nick's CyberCyan */
 --color-cyan-530: hsl(191, 54%, 64%); /* Nick's FadedCyberCyan */
+--color-cyan-540: hsl(194, 69%, 54%);
 --color-cyan-700: hsl(194, 50%, 47%);
 --color-cyan-900: hsl(196, 27%, 41%);
 --color-cyan-gradient-1:
@@ -619,7 +621,7 @@ Custom Icons
 --color-yellow-310: hsl(61, 46%, 69%);
 --color-yellow-500: hsl(59, 71%, 68%);
 --color-yellow-700: hsl(58, 86%, 66%);
---color-yellow-900: hsl(59, 82%, 44%);
+--color-yellow-900: hsl(59, 81%, 47%);
 --color-yellow-gradient-1:
     linear-gradient(180deg,
     #fcff80, #fafd6b, #f9fb57, #f6f843, 
@@ -1305,6 +1307,12 @@ div.search-result-container
     border-radius: var(--scale-2-1);
 }
 
+/*──────────Style Setting File Explorer Wrapping──────────*/
+.file-explorer-unwrap .nav-file-title,
+.file-explorer-unwrap .nav-folder-title {
+    white-space: nowrap;
+}
+
 .nav-file-title-content,
 .nav-folder-title-content  {
     line-height: calc(var(--line-height) - 0.5rem);
@@ -1324,6 +1332,11 @@ div.search-result-container
 
 .tree-item-self.search-result-file-title .tree-item-flair {
     font-weight: var(--font-regular);
+}
+
+/*──────────Style Setting Search Tab Wrapping──────────*/
+.search-explorer-unwrap .search-result-file-title {
+    white-space: nowrap;
 }
 
 /*─────────File Explorer Colors──────────*/
@@ -1716,22 +1729,6 @@ Content / Active Note / Opened Notes
 /*──────────Headings──────────*/
 
 /* Header Sizing */
-
-/* Cecilia's Sizing
-
-:root {
-    --h1-size: var(--font-scale-7);
-    --h2-size: var(--font-scale-6);
-    --h3-size: var(--font-scale-5);
-    --h4-size: var(--font-scale-4);
-    --h5-size: var(--font-scale-4);
-    --h6-size: var(--font-scale-4);
-
-    --header-line-height: calc(0.8 * var(--line-height));
-}
-
-*/
-
 :root {
     --h1-size: 1.750rem;
     --h2-size: 1.688rem;
@@ -1860,6 +1857,117 @@ Content / Active Note / Opened Notes
     -webkit-text-fill-color: transparent;
 }
 
+/*──────────Style Setting Headings──────────*/
+/* Preferred Mode Headers */
+body.lyt-gradient-headers .cm-header-1,
+body.lyt-gradient-headers .markdown-preview-view h1,
+body.lyt-gradient-headers .markdown-preview-view h1 code {
+    background: var(--color-yellow-gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(var(--header-shadow-size) var(--header-shadow-color));
+}
+
+body.lyt-gradient-headers .cm-header-2,
+body.lyt-gradient-headers .markdown-preview-view h2,
+body.lyt-gradient-headers .markdown-preview-view h2 code {
+    background: var(--color-purple-gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(var(--header-shadow-size) var(--header-shadow-color));
+}
+
+body.lyt-gradient-headers .cm-header-3,
+body.lyt-gradient-headers .markdown-preview-view h3,
+body.lyt-gradient-headers .markdown-preview-view h3 code {
+    background: var(--color-cyan-gradient-3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(var(--header-shadow-size) var(--header-shadow-color));
+}
+
+body.lyt-gradient-headers .cm-header-4,
+body.lyt-gradient-headers .markdown-preview-view h4,
+body.lyt-gradient-headers .markdown-preview-view h4 code {
+    background: var(--color-green-gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.lyt-gradient-headers .cm-header-5,
+body.lyt-gradient-headers .markdown-preview-view h5,
+body.lyt-gradient-headers .markdown-preview-view h6 code {
+    background: var(--color-slate-gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.lyt-gradient-headers .cm-header-6,
+body.lyt-gradient-headers .markdown-preview-view h6,
+body.lyt-gradient-headers .markdown-preview-view h6 code {
+    background: var(--color-slate-gradient-2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Safe Mode Headers */
+body.lyt-flat-headers .cm-header-1,
+body.lyt-flat-headers .markdown-preview-view h1,
+body.lyt-flat-headers .markdown-preview-view h1 code {
+    color: var(--color-yellow-900);
+    background: initial;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+    filter: drop-shadow(var(--header-shadow-size) var(--header-shadow-color));
+}
+
+body.lyt-flat-headers .cm-header-2,
+body.lyt-flat-headers .markdown-preview-view h2,
+body.lyt-flat-headers .markdown-preview-view h2 code {
+    color: var(--color-purple-700);
+    background: initial;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+    filter: drop-shadow(var(--header-shadow-size) var(--header-shadow-color));
+}
+
+body.lyt-flat-headers .cm-header-3,
+body.lyt-flat-headers .markdown-preview-view h3,
+body.lyt-flat-headers .markdown-preview-view h3 code {
+    color: var(--color-cyan-540);
+    background: initial;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+    filter: drop-shadow(var(--header-shadow-size) var(--header-shadow-color));
+}
+
+body.lyt-flat-headers .cm-header-4,
+body.lyt-flat-headers .markdown-preview-view h4,
+body.lyt-flat-headers .markdown-preview-view h4 code {
+    color: var(--color-green-700);
+    background: initial;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+}
+
+body.lyt-flat-headers .cm-header-5,
+body.lyt-flat-headers .markdown-preview-view h5,
+body.lyt-flat-headers .markdown-preview-view h5 code {
+    color: var(--color-slate-500);
+    background: initial;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+}
+
+body.lyt-flat-headers .cm-header-6,
+body.lyt-flat-headers .markdown-preview-view h6,
+body.lyt-flat-headers .markdown-preview-view h6 code {
+    color: var(--color-slate-700);
+    background: initial;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+}
+
 /*──────────Emphasis──────────*/
 
 /* Bold */
@@ -1912,6 +2020,54 @@ Content / Active Note / Opened Notes
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(var(--color-highlight-shadow));
+}
+
+/*──────────Style Setting Highlights──────────*/
+/* Preferred Mode Highlights */
+body.lyt-gradient-text-highlights .cm-s-obsidian span.cm-highlight,
+body.lyt-gradient-text-highlights .markdown-preview-view mark {
+    background: var(--md-color-highlight-bg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(var(--color-highlight-shadow));
+}
+
+body.lyt-gradient-text-highlights .markdown-source-view.is-live-preview
+body.lyt-gradient-text-highlights .cm-header.cm-formatting-highlight {
+    background: var(--md-color-highlight-bg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(var(--color-highlight-shadow));
+}
+
+/* Safe Mode Highlights */
+body.lyt-gradient-bg-highlights .cm-s-obsidian span.cm-highlight,
+body.lyt-gradient-bg-highlights .markdown-preview-view mark,
+body.lyt-gradient-bg-highlights .cm-s-obsidian .cm-strong,
+body.lyt-gradient-bg-highlights .markdown-preview-view strong,
+body.lyt-gradient-bg-highlights .cm-s-obsidian .cm-em,
+body.lyt-gradient-bg-highlights .markdown-preview-view em {
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+
+    color: var(--color-highlight-text);
+    background: var(--color-highlight-gradient);
+    filter: drop-shadow(var(--color-highlight-shadow));
+    border-radius: var(--scale-2-1);
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+body.lyt-gradient-bg-highlights .markdown-source-view.is-live-preview .cm-header.cm-formatting-highlight {
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+
+    color: var(--color-highlight-text);
+    background: var(--color-highlight-gradient);
+    filter: drop-shadow(var(--color-highlight-shadow));
+    border-radius: var(--scale-2-1);
+    padding-left: 1px;
+    padding-right: 1px;
 }
 
 /* Comments */
@@ -5428,6 +5584,54 @@ thead.table-view-thead tr th {
     margin-top: 0;
     margin-bottom: 0;
 }
+
+
+/* @settings
+
+name: LYT Mode Theme
+id: lyt-mode
+settings:
+    -
+        id: header-style
+        title: Header Style
+        description: Preferred Style makes the theme pop with gorgeous gradient headers. Safe Style opts for flat-colored headers which fixes visual bugs.
+        type: class-select
+        allowEmpty: false
+        default: lyt-gradient-headers
+        options:
+        -
+            label: Preferred Style
+            value: lyt-gradient-headers
+        -
+            label: Safe Style
+            value: lyt-flat-headers
+    -
+        id: highlight-style
+        title: Highlight Style
+        description: Preferred Style gives highlight a subtle but beautiful look. Safe Style gives highlights a gradient background but flat colored text which fixes visual bugs.
+        type: class-select
+        allowEmpty: false
+        default: lyt-gradient-text-highlights
+        options:
+        -
+            label: Preferred Style
+            value: lyt-gradient-text-highlights
+        -
+            label: Safe Style
+            value: lyt-gradient-bg-highlights
+    -
+        id: file-explorer-unwrap
+        title: Unwrap File Explorer Titles
+        description: 
+        type: class-toggle
+        default: false
+    -
+        id: search-explorer-unwrap
+        title: Unwrap Search Explorer Titles
+        description: 
+        type: class-toggle
+        default: false
+*/
 
 /*────────────────────────────────────
 ++++++++++++++++++++++++++++++++++++++
