@@ -2023,6 +2023,17 @@ body.lyt-flat-headers .markdown-preview-view h6 code {
 }
 
 /*──────────Style Setting Highlights──────────*/
+body.lyt-gradient-text-highlights .cm-s-obsidian span.cm-highlight.cm-inline-code,
+body.lyt-gradient-bg-highlights .cm-s-obsidian span.cm-highlight.cm-inline-code {
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+
+    background: var(--background-secondary);
+    color: var(--md-color-code-white);
+    filter: drop-shadow(var(--color-highlight-shadow));
+    border-radius: var(--scale-2-1);
+}
+
 /* Preferred Mode Highlights */
 body.lyt-gradient-text-highlights .cm-s-obsidian span.cm-highlight:not(.cm-highlight.cm-inline-code),
 body.lyt-gradient-text-highlights .markdown-preview-view mark {
