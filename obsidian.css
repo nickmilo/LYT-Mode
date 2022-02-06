@@ -2024,7 +2024,7 @@ body.lyt-flat-headers .markdown-preview-view h6 code {
 
 /*──────────Style Setting Highlights──────────*/
 /* Preferred Mode Highlights */
-body.lyt-gradient-text-highlights .cm-s-obsidian span.cm-highlight,
+body.lyt-gradient-text-highlights .cm-s-obsidian span.cm-highlight:not(.cm-highlight.cm-inline-code),
 body.lyt-gradient-text-highlights .markdown-preview-view mark {
     background: var(--md-color-highlight-bg);
     -webkit-background-clip: text;
