@@ -336,7 +336,8 @@ Custom Icons
 ++++++++++++Variables+++++++++++++++++
 ────────────────────────────────────*/
 
-:root {
+:root,
+body {
 
 /*──────────Font Families──────────*/
 
@@ -356,15 +357,14 @@ Custom Icons
 --font-monospace-2:
     'DM Mono', 'Fira Code', Courier, monospace;
 
---font-preview: var(--font-sans-2);
---font-editor: var(--font-sans-2);
---font-header: var(--font-sans-2);
---font-code: var(--font-monospace-2);
+--font-text-theme: var(--font-sans-1);
+--font-header: var(--font-sans-1);
+--font-monospace-theme: var(--font-monospace-2);
 
 /* Original Obsidian Font Variables */
---default-font: var(--font-sans-2);
---mermaid-font: var(--font-sans-2);
---reveal-font: var(--font-sans-2);
+--font-interface-theme: var(--font-sans-1);
+--font-mermaid: var(--font-sans-1);
+--font-reveal: var(--font-sans-1);
 
 /*──────────Font Weight──────────*/
 
@@ -1025,7 +1025,7 @@ body .nav-action-button svg {
 
 .nav-folder.mod-root > .nav-folder-title {
     font-size: var(--font-scale-0);
-    font-family: var(--font-code);
+    font-family: var(--font-monospace-theme);
     background: var(--background-secondary);
     top: 0;
     width: 100%;
@@ -1070,7 +1070,7 @@ body .nav-action-button svg {
 
 /*─────────Container for Outgoing Links and Backlinks Tab──────────*/
 
-.node-insert-event {
+:not(.workspace-leaf-content[data-type="markdown"] .markdown-preview-view).node-insert-event {
     padding:    var(--scale-0-0)
                 var(--scale-0-0)
                 var(--scale-8-4)
@@ -1195,7 +1195,7 @@ body .nav-action-button svg {
 .tree-item-flair {
     font-size: var(--font-scale-000);
     font-variant-numeric: tabular-nums;
-    font-family: var(--font-code);
+    font-family: var(--font-monospace-theme);
     padding:    var(--scale-2-1)
                 var(--scale-2-2)
                 var(--scale-0-0)
@@ -1411,7 +1411,7 @@ div.search-result-container
 }
 
 .status-bar-item {
-    font-family: var(--default-font);
+    font-family: var(--font-interface-theme);
     font-variant-numeric: tabular-nums;
     padding:    var(--scale-0-0)
                 var(--scale-2-4)
@@ -1639,7 +1639,7 @@ Content / Active Note / Opened Notes
 /* Editor */
 .markdown-source-view {
     font-optical-sizing: auto;
-    font-family: var(--font-editor);
+    font-family: var(--font-text-theme);
     line-height: var(--line-height);
     letter-spacing: var(--tracking-0);
     text-shadow: none;
@@ -1730,12 +1730,12 @@ Content / Active Note / Opened Notes
 
 /* Header Sizing */
 :root {
-    --h1-size: 1.750rem;
-    --h2-size: 1.688rem;
-    --h3-size: 1.563rem;
-    --h4-size: 1.438rem;
-    --h5-size: 1.313rem;
-    --h6-size: 1.188rem;
+    --h1: 1.750rem;
+    --h2: 1.688rem;
+    --h3: 1.563rem;
+    --h4: 1.438rem;
+    --h5: 1.313rem;
+    --h6: 1.188rem;
 
     --header-line-height: calc(0.8 * var(--line-height));
 }
@@ -1749,7 +1749,7 @@ Content / Active Note / Opened Notes
 .cm-inline-code.cm-header-1,
 .markdown-preview-view h1 {
     font-family: var(--font-header);
-    font-size: var(--h1-size);
+    font-size: var(--h1);
     font-weight: var(--font-bold);
     line-height: var(--header-line-height);
 }
@@ -1758,7 +1758,7 @@ Content / Active Note / Opened Notes
 .cm-s-obsidian .cm-inline-code.cm-header-2,
 .markdown-preview-view h2 {
     font-family: var(--font-header);
-    font-size: var(--h2-size);
+    font-size: var(--h2);
     font-weight: var(--font-bold);
     line-height: var(--header-line-height);
 }
@@ -1767,7 +1767,7 @@ Content / Active Note / Opened Notes
 .cm-s-obsidian .cm-inline-code.cm-header-3,
 .markdown-preview-view h3 {
     font-family: var(--font-header);
-    font-size: var(--h3-size);
+    font-size: var(--h3);
     font-weight: var(--font-bold);
     line-height: var(--header-line-height);
 }
@@ -1776,7 +1776,7 @@ Content / Active Note / Opened Notes
 .cm-s-obsidian .cm-inline-code.cm-header-4,
 .markdown-preview-view h4 {
     font-family: var(--font-header);
-    font-size: var(--h4-size);
+    font-size: var(--h4);
     font-weight: var(--font-bold);
     line-height: var(--header-line-height);
 }
@@ -1785,7 +1785,7 @@ Content / Active Note / Opened Notes
 .cm-s-obsidian .cm-inline-code.cm-header-5,
 .markdown-preview-view h5 {
     font-family: var(--font-header);
-    font-size: var(--h5-size);
+    font-size: var(--h5);
     font-weight: var(--font-bold);
     line-height: var(--header-line-height);
 }
@@ -1794,7 +1794,7 @@ Content / Active Note / Opened Notes
 .cm-s-obsidian .cm-inline-code.cm-header-6,
 .markdown-preview-view h6 {
     font-family: var(--font-header);
-    font-size: var(--h6-size);
+    font-size: var(--h6);
     font-weight: var(--font-bold);
     line-height: var(--header-line-height);
 }
@@ -1809,52 +1809,40 @@ Content / Active Note / Opened Notes
 .cm-header-1,
 .markdown-preview-view h1,
 .markdown-preview-view h1 code {
-    background: var(--color-yellow-gradient-1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--color-yellow-900);
     filter: drop-shadow(var(--header-shadow-size) var(--header-shadow-color));
 }
 
 .cm-header-2,
 .markdown-preview-view h2,
 .markdown-preview-view h2 code {
-    background: var(--color-purple-gradient-1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--color-purple-700);
     filter: drop-shadow(var(--header-shadow-size) var(--header-shadow-color));
 }
 
 .cm-header-3,
 .markdown-preview-view h3,
 .markdown-preview-view h3 code {
-    background: var(--color-cyan-gradient-3);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--color-cyan-540);
     filter: drop-shadow(var(--header-shadow-size) var(--header-shadow-color));
 }
 
 .cm-header-4,
 .markdown-preview-view h4,
 .markdown-preview-view h4 code {
-    background: var(--color-green-gradient-1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--color-green-700);
 }
 
 .cm-header-5,
 .markdown-preview-view h5,
-.markdown-preview-view h6 code {
-    background: var(--color-slate-gradient-1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.markdown-preview-view h5 code {
+    color: var(--color-slate-500);
 }
 
 .cm-header-6,
 .markdown-preview-view h6,
 .markdown-preview-view h6 code {
-    background: var(--color-slate-gradient-2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--color-slate-700);
 }
 
 /*──────────Style Setting Headings──────────*/
@@ -1910,7 +1898,10 @@ body.lyt-gradient-headers .markdown-preview-view h6 code {
     -webkit-text-fill-color: transparent;
 }
 
-/* Safe Mode Headers */
+/* 
+
+Safe Mode Headers
+
 body.lyt-flat-headers .cm-header-1,
 body.lyt-flat-headers .markdown-preview-view h1,
 body.lyt-flat-headers .markdown-preview-view h1 code {
@@ -1966,7 +1957,7 @@ body.lyt-flat-headers .markdown-preview-view h6 code {
     background: initial;
     -webkit-background-clip: initial;
     -webkit-text-fill-color: initial;
-}
+} */
 
 /*──────────Emphasis──────────*/
 
@@ -2006,20 +1997,27 @@ body.lyt-flat-headers .markdown-preview-view h6 code {
 }
 
 /* Highlight */
-.cm-s-obsidian span.cm-highlight,
+.cm-s-obsidian span.cm-highlight.cm-highlight,
+.cm-s-obsidian span.cm-highlight.cm-highlight.cm-em,
+.cm-s-obsidian span.cm-highlight.cm-highlight.cm-strong,
+.cm-s-obsidian span.cm-highlight.cm-highlight.cm-strong.cm-em,
+.markdown-preview-view mark em,
+.markdown-preview-view mark strong,
+.markdown-preview-view mark em strong,
+.markdown-preview-view mark strong em,
 .markdown-preview-view mark {
+    color: var(--color-highlight-text);
     background: var(--md-color-highlight-bg);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     filter: drop-shadow(var(--color-highlight-shadow));
+    border-radius: var(--scale-2-1);
 }
 
 .markdown-source-view.is-live-preview
 .cm-header.cm-formatting-highlight {
+    color: var(--color-highlight-text);
     background: var(--md-color-highlight-bg);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     filter: drop-shadow(var(--color-highlight-shadow));
+    border-radius: var(--scale-2-1);
 }
 
 /*──────────Style Setting Highlights──────────*/
@@ -2051,39 +2049,37 @@ body.lyt-gradient-text-highlights .cm-header.cm-formatting-highlight {
     filter: drop-shadow(var(--color-highlight-shadow));
 }
 
-/* Safe Mode Highlights */
-body.lyt-gradient-bg-highlights .cm-s-obsidian span.cm-highlight:not(.cm-highlight.cm-inline-code),
-body.lyt-gradient-bg-highlights .markdown-preview-view mark,
-body.lyt-gradient-bg-highlights .cm-s-obsidian span.cm-highlight.cm-strong,
-body.lyt-gradient-bg-highlights .markdown-preview-view mark strong,
-body.lyt-gradient-bg-highlights .cm-s-obsidian span.cm-highlight.cm-em,
-body.lyt-gradient-bg-highlights .markdown-preview-view mark em {
-    -webkit-background-clip: initial;
-    -webkit-text-fill-color: initial;
-
-    color: var(--color-highlight-text);
-    background: var(--color-highlight-gradient);
-    filter: drop-shadow(var(--color-highlight-shadow));
-    border-radius: var(--scale-2-1);
-    padding-left: 1px;
-    padding-right: 1px;
-}
-
-body.lyt-gradient-bg-highlights .markdown-source-view.is-live-preview .cm-header.cm-formatting-highlight {
-    -webkit-background-clip: initial;
-    -webkit-text-fill-color: initial;
-
-    color: var(--color-highlight-text);
-    background: var(--color-highlight-gradient);
-    filter: drop-shadow(var(--color-highlight-shadow));
-    border-radius: var(--scale-2-1);
-    padding-left: 1px;
-    padding-right: 1px;
-}
-
 /* Comments */
 .cm-s-obsidian span.cm-comment {
     color: var(--md-color-comment);
+}
+
+:root, body {
+    --comment-h1: hsl(56, 44%, 76%);
+    --comment-h2: hsl(257, 33%, 82%);
+    --comment-h3: hsl(192, 34%, 74%);
+    --comment-h4: hsl(153, 35%, 75%);
+    --comment-h5: hsl(224, 26%, 83%);
+    --comment-h6: hsl(223, 14%, 75%);
+}
+
+.cm-s-obsidian span.cm-comment.cm-header-1 {
+    color: var(--comment-h1);
+}
+.cm-s-obsidian span.cm-comment.cm-header-2 {
+    color: var(--comment-h2);
+}
+.cm-s-obsidian span.cm-comment.cm-header-3 {
+    color: var(--comment-h3);
+}
+.cm-s-obsidian span.cm-comment.cm-header-4 {
+    color: var(--comment-h4);
+}
+.cm-s-obsidian span.cm-comment.cm-header-5 {
+    color: var(--comment-h5);
+}
+.cm-s-obsidian span.cm-comment.cm-header-6 {
+    color: var(--comment-h6);
 }
 
 /*──────────Mixed Emphasis──────────*/
@@ -2449,6 +2445,20 @@ ul.contains-task-list {
 
 /*──────────Inline Code/Codeblocks──────────*/
 
+pre,
+.theme-light pre[class*="language-"],
+.theme-dark pre[class*="language-"] {
+    background: var(--background-primary-alt);
+    text-shadow: none;
+}
+
+code,
+.theme-light code[class*="language-"],
+.theme-dark code[class*="language-"] {
+    background: var(--background-primary-alt);
+    text-shadow: none;
+}
+
 pre code[class*="language-"].is-loaded {
     padding:    var(--scale-0-0)
                 var(--scale-0-0)
@@ -2461,9 +2471,10 @@ pre code[class*="language-"].is-loaded {
 .cm-s-obsidian .cm-math,
 .cm-s-obsidian .cm-tag,
 div[data-tag-name="pre"] code,
+code,
 pre code,
 .markdown-preview-view code {
-    font-family: var(--font-code);
+    font-family: var(--font-monospace-theme);
 }
 
 .cm-s-obsidian .cm-math {
@@ -2501,6 +2512,8 @@ code.is-loaded {
 
 /* Inline Code / Codeblocks Syntax Highlighting */
 
+code,
+pre code,
 .cm-s-obsidian span.cm-bracket,
 .cm-s-obsidian span.cm-math,
 .cm-s-obsidian .cm-hmd-codeblock,
@@ -2563,7 +2576,7 @@ span.cm-inline-code:not(.cm-formatting-code) {
 
 .markdown-source-view.mod-cm6 span.code-block-flair {
     color: var(--md-color-code-white);
-    font-family: var(--font-code);
+    font-family: var(--font-monospace-theme);
     font-size: var(--font-scale-00);
     padding: 0;
     margin-top: var(--scale-2-1);
@@ -2581,7 +2594,7 @@ span.cm-inline-code:not(.cm-formatting-code) {
 
 .CodeMirror-linenumber,
 .cm-lineNumbers {
-    font-family: var(--font-code);
+    font-family: var(--font-monospace-theme);
     font-size: var(--font-scale-0);
     font-variant-numeric: tabular-nums;
     vertical-align: middle;
@@ -2715,7 +2728,7 @@ span.cm-inline-code:not(.cm-formatting-code) {
 .mermaid tspan,
 .mermaid text.messageText {
     font-size: var(--font-scale-0) !important;
-    font-family: var(--font-code) !important;
+    font-family: var(--font-monospace-theme) !important;
     font-weight: var(--font-regular);
     stroke: none !important;
     fill: var(--color-gray-10) !important;
@@ -2731,7 +2744,7 @@ span.cm-inline-code:not(.cm-formatting-code) {
 ────────────────────────────────────*/
 
 .cm-s-obsidian .HyperMD-table-row {
-    font-family: var(--font-code);
+    font-family: var(--font-monospace-theme);
     font-size: var(--font-scale-0);
 }
 
@@ -2773,7 +2786,7 @@ pre.frontmatter.language-yaml {
 
 .markdown-source-view .cm-hmd-frontmatter,
 code.language-yaml {
-    font-family: var(--font-code);
+    font-family: var(--font-monospace-theme);
     font-size: var(--font-scale-0);
     font-variant-numeric: tabular-nums;
 }
@@ -2828,7 +2841,7 @@ span.key.atrule {
 }
 
 span.frontmatter-section-label {
-    font-family: var(--default-font);
+    font-family: var(--font-interface-theme);
     font-size: var(--font-scale-00);
     font-weight: var(--font-bold);
     text-transform: uppercase;
@@ -3287,7 +3300,7 @@ body:not(.no-custom-icons) .modal-close-button {
 /*─────────Command, Quick Switcher etc. Modals──────────*/
 
 .prompt {
-    font-family: var(--default-font);
+    font-family: var(--font-interface-theme);
     padding:    var(--scale-0-0)
                 var(--scale-0-0)
                 var(--scale-0-0)
@@ -3312,7 +3325,7 @@ input.prompt-input {
 
 .suggestion-item,
 .suggestion .suggestion-item {
-    font-family: var(--default-font);
+    font-family: var(--font-interface-theme);
     border-radius: var(--scale-0-0);
     padding:    var(--scale-2-1)
                 var(--scale-2-10)
@@ -3364,7 +3377,7 @@ input.prompt-input {
 .suggestion-prefix {
     color: var(--text-muted);
     font-size: var(--font-scale-0);
-    font-family: var(--font-code);
+    font-family: var(--font-monospace-theme);
     font-style: italic;
     text-transform: uppercase;
     letter-spacing: var(--tracking-3);
@@ -3387,7 +3400,7 @@ input.prompt-input {
 .theme-light .setting-hotkey,
 .theme-dark kbd,
 .theme-dark .setting-hotkey {
-    font-family: var(--font-code);
+    font-family: var(--font-monospace-theme);
     color: var(--color-slate-300);
     background: var(--color-gray-100);
     border: 1px solid var(--shadow-xsm);
@@ -3625,7 +3638,7 @@ input.prompt-input {
 /* don't remove !important */
 .theme-light button,
 .theme-dark button {
-    font-family: var(--default-font);
+    font-family: var(--font-interface-theme);
     font-size: var(--font-scale-0);
     padding:    var(--scale-2-2)
                 var(--scale-2-8)
@@ -3765,7 +3778,7 @@ input[type='number'],
 input.document-search-input,
 input.document-replace-input {
     font-size: calc(2px + var(--font-scale-1));
-    font-family: var(--default-font);
+    font-family: var(--font-interface-theme);
     border-radius: var(--scale-2-1);
     transition: var(--duration-fast-2)
                 var(--motion-smooth);
@@ -3916,7 +3929,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 ────────────────────────────────────*/
 
 .dropdown {
-    font-family: var(--default-font);
+    font-family: var(--font-interface-theme);
     font-size: var(--font-scale-1);
     line-height: var(--line-height-1);
     width: 215px;
@@ -3965,7 +3978,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 
 .empty-state-action {
-    font-family: var(--font-code);
+    font-family: var(--font-monospace-theme);
     font-size: var(--font-scale-00);
     line-height: var(--line-height-1);
     text-transform: uppercase;
@@ -4006,7 +4019,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 
 .theme-light .notice,
 .theme-dark .notice {
-    font-family: var(--font-code);
+    font-family: var(--font-monospace-theme);
     background: var(--color-cyan-700);
     border: 1px solid var(--shadow-xsm);
     border-radius: var(--scale-2-2);
@@ -4224,7 +4237,7 @@ code::-webkit-scrollbar-thumb {
 .progress-bar-message {
     font-size: var(--font-scale-2);
     color: var(--color-yellow-700) !important;
-    font-family: var(--font-code);
+    font-family: var(--font-monospace-theme);
     text-transform: uppercase;
     letter-spacing: var(--tracking-2);
     animation: blinkingText 0.4s infinite;
@@ -4395,7 +4408,7 @@ are many tab options on drawers + sizing fix */
 .is-mobile .workspace-drawer-header-name {
     height: var(--scale-8-3);
     font-size: var(--font-scale-0);
-    font-family: var(--font-code);
+    font-family: var(--font-monospace-theme);
     font-weight: var(--font-bold);
     letter-spacing: var(--tracking-3);
 }
@@ -4403,7 +4416,7 @@ are many tab options on drawers + sizing fix */
 .is-mobile .workspace-drawer-header-info {
     height: var(--scale-8-3);
     font-size: var(--font-scale-00);
-    font-family: var(--font-code);
+    font-family: var(--font-monospace-theme);
     font-weight: var(--font-bold);
     letter-spacing: var(--tracking-3);
 }
@@ -4532,12 +4545,12 @@ are many tab options on drawers + sizing fix */
 /* Header Sizing */
 
 :root .is-mobile {
-    --h1-size: calc(0.85 * var(--font-scale-7));
-    --h2-size: calc(0.85 * var(--font-scale-6));
-    --h3-size: calc(0.85 * var(--font-scale-5));
-    --h4-size: calc(0.85 * var(--font-scale-4));
-    --h5-size: calc(0.85 * var(--font-scale-4));
-    --h6-size: calc(0.85 * var(--font-scale-4));
+    --h1: calc(0.85 * var(--font-scale-7));
+    --h2: calc(0.85 * var(--font-scale-6));
+    --h3: calc(0.85 * var(--font-scale-5));
+    --h4: calc(0.85 * var(--font-scale-4));
+    --h5: calc(0.85 * var(--font-scale-4));
+    --h6: calc(0.85 * var(--font-scale-4));
 
     --header-line-height: calc(0.8 * var(--line-height));
 }
@@ -4584,7 +4597,7 @@ are many tab options on drawers + sizing fix */
 
 .is-mobile .vertical-tab-header::before {
     content: "Settings";
-    font-family: var(--default-font);
+    font-family: var(--font-interface-theme);
     font-weight: var(--font-bold);
     color: var(--text-muted);
     background: var(--background-secondary);
@@ -4852,7 +4865,7 @@ are many tab options on drawers + sizing fix */
     ────────────────────────────────────*/
 
     .pull-down-action {
-        font-family: var(--font-code);
+        font-family: var(--font-monospace-theme);
         font-weight: var(--font-bold);
         text-transform: uppercase;
         letter-spacing: var(--tracking-3);
@@ -4904,19 +4917,19 @@ are many tab options on drawers + sizing fix */
 }
 
 #calendar-container .right-nav {
-    font-family: var(--font-code);
+    font-family: var(--font-monospace-theme);
     margin-right: var(--scale-2-4);
 }
 
 #calendar-container .title span {
-    font-family: var(--font-code);
+    font-family: var(--font-monospace-theme);
     font-size: var(--font-scale-1);
     text-transform: uppercase;
     letter-spacing: var(--tracking-3);
 }
 
 #calendar-container .title span.month {
-    font-family: var(--font-code);
+    font-family: var(--font-monospace-theme);
     font-size: var(--font-scale-1);
     font-weight: var(--font-bold);
     text-transform: uppercase;
@@ -4925,7 +4938,7 @@ are many tab options on drawers + sizing fix */
 
 #calendar-container .day,
 #calendar-container .week-num {
-    font-family: var(--font-code);
+    font-family: var(--font-monospace-theme);
     padding:    var(--scale-2-2)
                 var(--scale-2-3)
                 var(--scale-2-2)
@@ -5228,7 +5241,7 @@ textarea.kanban-plugin__lane-input {
 .view-content .kanban-plugin
 .kanban-plugin__item-button-wrapper
 button.kanban-plugin__new-item-button {
-    font-family: var(--font-code) !important;
+    font-family: var(--font-monospace-theme) !important;
     text-transform: uppercase;
     letter-spacing: var(--tracking-3);
     color: var(--text-muted);
@@ -5288,49 +5301,9 @@ body .excalidraw {
     --gap: 0;
 }
 
-.excalidraw .Island {
-    padding:    var(--scale-8-1)
-                var(--scale-8-1)
-                var(--scale-8-1)
-                var(--scale-8-1);
-    margin: var(--scale-2-4)
-            var(--scale-2-4)
-            var(--scale-2-4)
-            var(--scale-2-4);
-}
-
-body .excalidraw .Island.App-menu__left {
-    padding:    var(--scale-8-2)
-                var(--scale-8-2)
-                var(--scale-8-2)
-                var(--scale-8-2);
-}
-
 .workspace-leaf-content[data-type="excalidraw"]
 .view-content {
     padding:    var(--scale-0-0);
-}
-
-body .excalidraw {
-    --gap: 0;
-}
-
-.excalidraw .Island {
-    padding:    var(--scale-8-1)
-                var(--scale-8-1)
-                var(--scale-8-1)
-                var(--scale-8-1);
-    margin: var(--scale-2-4)
-            var(--scale-2-4)
-            var(--scale-2-4)
-            var(--scale-2-4);
-}
-
-body .excalidraw .Island.App-menu__left {
-    padding:    var(--scale-8-2)
-                var(--scale-8-2)
-                var(--scale-8-2)
-                var(--scale-8-2);
 }
 
 .excalidraw .ToolIcon_size_small .ToolIcon__icon {
@@ -5340,13 +5313,13 @@ body .excalidraw .Island.App-menu__left {
 }
 
 .workspace .excalidraw .reset-zoom-button {
-    font-family: var(--font-code);
+    font-family: var(--font-monospace-theme);
     font-size: var(--font-scale-1);
     letter-spacing: var(--tracking-4);
 }
 
 .workspace .excalidraw .color-picker-input {
-    font-family: var(--default-font);
+    font-family: var(--font-interface-theme);
     font-size: var(--font-scale-1);
 }
           
@@ -5378,7 +5351,7 @@ body .excalidraw .Island h3,
 body .excalidraw .Island legend,
 body .excalidraw .Island label.control-label {
     color: var(--color-gray-70);
-    font-family: var(--font-code);
+    font-family: var(--font-monospace-theme);
     text-transform: uppercase;
 }
 
@@ -5608,28 +5581,28 @@ settings:
         description: Preferred Style makes the theme pop with gorgeous gradient headers. Safe Style opts for flat-colored headers which fixes visual bugs.
         type: class-select
         allowEmpty: false
-        default: lyt-gradient-headers
+        default: lyt-flat-headers
         options:
-        -
-            label: Preferred Style
-            value: lyt-gradient-headers
         -
             label: Safe Style
             value: lyt-flat-headers
+        -
+            label: Preferred Style
+            value: lyt-gradient-headers
     -
         id: highlight-style
         title: Highlight Style
         description: Preferred Style gives highlight a subtle but beautiful look. Safe Style gives highlights a gradient background but flat colored text which fixes visual bugs.
         type: class-select
         allowEmpty: false
-        default: lyt-gradient-text-highlights
+        default: lyt-gradient-bg-highlights
         options:
-        -
-            label: Preferred Style
-            value: lyt-gradient-text-highlights
         -
             label: Safe Style
             value: lyt-gradient-bg-highlights
+        -
+            label: Preferred Style
+            value: lyt-gradient-text-highlights
     -
         id: file-explorer-unwrap
         title: Unwrap File Explorer Titles
