@@ -1,55 +1,78 @@
 ![lyt-mode-graphic](lyt-mode-graphic-1.jpg)
 
-# LYT-Mode
+# LYT Mode
 
 LYT Mode is for "Linking Your Thinking". It invokes sensemaking and lateral thinking.
+It was designed by [@ceciliamay](https://github.com/ceciliamay) on commission from Nick Milo for the purpose of evolving his Cybertron theme.
+Cyberpunk-inspired, 
 
-It was designed by **Cecilia May** (https://github.com/ceciliamay) on commission from Nick Milo for the purpose of evolving his Cybertron theme.
-
-## Note from Nick
-
-This is where I do my sensemaking: in LYT Mode.
-
-That stands for: "Linking Your Thinking" Mode. 
-
-LYT Mode is meant to encourage sensemaking and lateral thinking.
-
-I do both my creative and analytical work in LYT Mode.
+- [History of LYT Mode](#history-of-lyt-mode)
+- [How to Use LYT Mode](#how-to-use-lyt-mode)
+	- [Alternative Checkboxes](#alternative-checkboxes)
+- [Supported Plugins](#supported-plugins)
+- [Features](#features)
 
 ## History of LYT Mode
 
-This theme is meant to be the definitive evolution of my first love: the [[Cybertron Theme]]. 
+This [Obsidian](https://obsidian.md/) theme is meant to be the definitive evoltion of my first love: the [Cybetron ](https://github.com/nickmilo/Cybertron) theme.
 
-Nick and **Cecilia May** ( https://github.com/ceciliamay ) crossed paths in a LYT Workshop. At the same time, Cecilia was designing the winner of Obsidian's 2021 Theme of the Year with the now legendary theme called "Primary". Before the winner was known, Nick reached out to the public for help to take Cybertron to the next level. It was going to take more CSS & Design skill than what he could muster. Luckily, Cecilia raised her hand. Then Nick commissioned Cecilia May to design LYT Mode and this is the result.
+[@nickmilo](https://github.com/nickmilo) and [@ceciliamay](https://github.com/ceciliamay) crossed paths in an LYT workshop. At the same time, Cecilia was designing the winner of Obsidian's 2021 Theme of the Year with the now legendary theme, [Primary](https://github.com/ceciliamay/obsidianmd-theme-primary). Before the winner was known, Nick reached out to the public for help to take Cybertron to the next level. It was going to take more CSS & Design skill than what he could muster. Luckily, Cecilia raised her hand. Then Nick commissioned Cecilia May to design LYT Mode and this is the result.
+
+## How to Use LYT Mode
+
+### Alternative Checkboxes
+
+LYT Mode also offers additional syntax for checkboxes. These act like bullet journaling “legends”. [Others use alternate checkboxes for quick visual references.](https://www.youtube.com/watch?v=8IL0wFUT6XQ)
+
+| Syntax | Description |
+|--------|-------------|
+| `- [ ]`  | Unchecked   |
+| `- [x]`  | Checked     |
+| `- [>]`  | Rescheduled |
+| `- [<]`  | Scheduled   |
+| `- [!]`  | Important   |
+| `- [-]`  | Cancelled   |
+| `- [/]`  | In Progress |
+| `- [?]`  | Question    |
+| `- [*]`  | Star        |
+| `- [n]`  | Note        |
+| `- [l]`  | Location    |
+| `- [i]`  | Information |
+| `- [I]`  | Idea        |
+| `- [S]`  | Amount      |
+| `- [p]`  | Pro         |
+| `- [c]`  | Con         |
+| `- [b]`  | Bookmark    |
+| `- [f]`  | Fire        |
+| `- [k]`  | Key         |
+| `- [w]`  | Win         |
+| `- [u]`  | Up          |
+| `- [d]`  | Down        |
 
 ## Supported Plugins
 
-- Calendar by Liam Cain  
-- Sliding Pane (Andy’s Mode) by death_au  
-- Kanban by mgmeyers  
-- Excalidraw by Zsolt Viczian  
-- Dataview by Michael Brenan _(coming soon)_
+LYT Mode focused on emphasizing support for markdown or note-native features, as well as all of Obsidian’s core features and visual cues. That being said, LYT Mode should work with most plugins but this list shows plugins given extra love or design support.
 
-## Special Features
+- Calendar by Liam Cain
+- Sliding Panes (Andy’s Mode) by death_au
+- Kanban by mgmeyers
+- Excalidraw by Zsolt Viczian
+- Dataview by Michael Brenan
+- Hover Editor by nothingislost
 
-- New and evolved color palette (based on Cybertron).
-- Featuring Avenir Next + DM Mono font combination (The classic LYT combo!)
-- Works across all devices  
-- Support for Legacy Editor and Live Preview.
-- Custom icons  
-- Completely custom interface design with delightful interactions  
-- LYT Mode Syntax Highlighting  
-- Special Color for each markdown emphasis:  
-   - Purple for Bold  
-   - Yellow for Italics  
-   - White for Bold and Italics  
-   - Gray for Strikethrough  
-   - Gradient for Highlight  
-   - Magenta for Links  
-   - Green for Tags
-   - Different Colored Headers
-- Tighter sidebar item line-height to allow you to see more notes, tags, and links  
-- Grayed out markdown formatting  
-- Bigger Popovers  
-- Support for Markdown Slides  
-- Support for Publish _(coming soon)_
+## Features
+
+1. Evolved color palette from Cybertron comparison
+	- Special Colors for Markdown Emphasis
+2. Beautiful readable fonts originally made for each other: **DM Sans DM Mono**
+3. Support for both **Mobile and Desktop**
+4. Support for all Obsidian views: Legacy, Live Preview, and Reading
+5. **Custom Icons**
+7. Minimal animation for more focused work
+8. LYT Mode Syntax Highlighting
+9. **Tighter Sidebar Line Height** spacing to allow you to see more notes, tags, and links
+10. Grayed out Markdown Formatting (except for headers)
+11. Bigger Popovers
+12. Design Support for Callouts
+13. Support for **Slides**
+14. Support for **Publish** (soon)
