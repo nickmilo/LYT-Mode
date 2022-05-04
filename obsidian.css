@@ -2,7 +2,7 @@
 
 L Y T  M O D E
 
-Obsidian Theme v1.2
+Obsidian Theme v1.3
 
 by Cecilia May (commissioned by Nick Milo)
 
@@ -1673,6 +1673,8 @@ body {
     padding-left: var(--scale-2-4);
 }
 
+h1,
+.vertical-tab-content h1,
 .cm-header-1,
 .cm-inline-code.cm-header-1,
 .markdown-preview-view h1 {
@@ -1682,6 +1684,8 @@ body {
     line-height: var(--header-line-height);
 }
 
+h2,
+.vertical-tab-content h2,
 .cm-header-2,
 .cm-s-obsidian .cm-inline-code.cm-header-2,
 .markdown-preview-view h2 {
@@ -1691,6 +1695,8 @@ body {
     line-height: var(--header-line-height);
 }
 
+h3,
+.vertical-tab-content h3,
 .cm-header-3,
 .cm-s-obsidian .cm-inline-code.cm-header-3,
 .markdown-preview-view h3 {
@@ -1700,6 +1706,8 @@ body {
     line-height: var(--header-line-height);
 }
 
+h4,
+.vertical-tab-content h4,
 .cm-header-4,
 .cm-s-obsidian .cm-inline-code.cm-header-4,
 .markdown-preview-view h4 {
@@ -1709,6 +1717,8 @@ body {
     line-height: var(--header-line-height);
 }
 
+h5,
+.vertical-tab-content h5,
 .cm-header-5,
 .cm-s-obsidian .cm-inline-code.cm-header-5,
 .markdown-preview-view h5 {
@@ -1718,6 +1728,8 @@ body {
     line-height: var(--header-line-height);
 }
 
+h6,
+.vertical-tab-content h6,
 .cm-header-6,
 .cm-s-obsidian .cm-inline-code.cm-header-6,
 .markdown-preview-view h6 {
@@ -2087,7 +2099,8 @@ a.internal-link,
 .cm-embed-block a.internal-link,
 .markdown-preview-view a.internal-link,
 .markdown-preview-view a.external-link,
-.callout a.internal-link {
+.callout a.internal-link,
+a.publish-changes-current-site-name {
     text-decoration: none;
     color: var(--md-color-link);
 }
@@ -2105,7 +2118,8 @@ a:hover {
 }
 
 .markdown-preview-view a.internal-link:hover,
-.markdown-preview-view a.external-link:hover {
+.markdown-preview-view a.external-link:hover,
+a.publish-changes-current-site-name:hover {
     text-decoration: none;
     color: var(--md-color-link-hover);
 }
@@ -2129,8 +2143,8 @@ a.internal-link.is-unresolved {
 
 /* Linked Header Colors */
 
-.cm-s-obsidian span.cm-header.cm-hmd-internal-link, /* Editor Internal Link */
-.cm-s-obsidian span.cm-header.cm-link, /* Editor External Link */
+/* .cm-s-obsidian span.cm-header.cm-hmd-internal-link, 
+.cm-s-obsidian span.cm-header.cm-link, 
 .markdown-preview-view h1 a.internal-link, 
 .markdown-preview-view h2 a.internal-link,
 .markdown-preview-view h3 a.internal-link,
@@ -2148,7 +2162,7 @@ a.internal-link.is-unresolved {
     background: none;
     -webkit-background-clip: initial;
     -webkit-text-fill-color: initial;
-}
+} */
 
 /*──────────Blockquotes──────────*/
 
@@ -3549,6 +3563,9 @@ span.frontmatter-section-label {
     background: var(--color-gray-80);
 }
 
+/* Backlinks "Link" Button */
+
+
 /*────────────────────────────────────
                 Outgoing
 ────────────────────────────────────*/
@@ -3761,7 +3778,125 @@ span.frontmatter-section-label {
             Publish
 ────────────────────────────────────*/
 
-/* TODO */
+.publish-sections-container {
+    padding-right: var(--scale-2-4);
+}
+
+.publish-section-header {
+    border-bottom: none;
+}
+
+.publish-section-header-toggle-collapsed-button {
+    width: var(--scale-8-2);
+    height: var(--scale-8-2);
+}
+
+.publish-section-header-toggle-collapsed-button svg {
+    margin-bottom: 4px;
+}
+
+.mod-publish .publish-change-list {
+    padding: var(--scale-2-2)
+            var(--scale-2-2);
+}
+
+.mod-publish .file-tree-item {
+    padding: 0 0;
+    background: none !important;
+}
+
+.mod-publish .tree-item-self .tree-item-icon {
+    margin-top: unset;
+}
+
+.mod-publish .file-tree-item-checkbox {
+    margin: var(--scale-2-1)
+            var(--scale-2-3)
+            var(--scale-2-1)
+            calc(-1 * var(--scale-2-2));
+}
+
+.mod-publish .mod-folder .file-tree-item-checkbox {
+    margin: var(--scale-2-1)
+            var(--scale-2-3)
+            var(--scale-2-1)
+            calc(-1 * var(--scale-2-1));
+}
+
+.mod-publish .publish-upload-item {
+    margin-right: var(--scale-2-2);
+}
+
+.mod-publish .publish-upload-item:first-child {
+    margin-top: var(--scale-0-0);
+}
+
+.mod-publish .publish-upload-item:last-child {
+    margin-bottom: var(--scale-0-0);
+}
+
+.mod-publish .publish-upload-item::before {
+    border-radius: var(--scale-2-1);
+}
+
+/* Publish Modal Colors */
+.mod-publish .publish-change-list {
+    background: var(--background-secondary);
+    border-radius: var(--scale-2-1);
+}
+
+.mod-publish .publish-sections-container > div:nth-child(1) .publish-change-list {
+    border: 1px solid var(--color-orange-300);
+}
+
+.mod-publish .publish-sections-container > div:nth-child(2) .publish-change-list {
+    border: 1px solid var(--color-green-920);
+}
+
+.mod-publish .publish-sections-container > div:nth-child(3) .publish-change-list {
+    border: 1px solid var(--color-yellow-900);
+}
+
+.mod-publish .file-tree-item.is-selected {
+    background: none;
+}
+
+.mod-publish .mod-folder .file-tree-item {
+    color: var(--color-white);
+}
+
+.mod-publish .publish-change-list .file-tree-item {
+    background: var(--color-orange-300);
+}
+
+.mod-publish .file-tree-item-icon {
+    color: inherit;
+}
+
+.mod-publish .publish-upload-item {
+    border: 1px solid var(--color-slate-700);
+}
+
+.mod-publish .publish-upload-item.mod-completed {
+    color: var(--color-green-900);
+    border: 1px solid var(--color-green-920);
+}
+
+.mod-publish .publish-upload-item::before {
+    opacity: 0.1;
+    border-right: 1px solid var(--color-green-920);
+}
+
+.mod-publish .publish-upload-item.mod-completed::before {
+    border-right: none;
+}
+
+.mod-publish .list-item-part .flair {
+    font-weight: var(--font-bold);
+    color: var(--color-gray-100);
+    background-color: var(--background-modifier-success);
+    border-radius: var(--scale-2-1);
+}
 
 /*────────────────────────────────────
 ++++++++++++++++++++++++++++++++++++++
@@ -3920,11 +4055,54 @@ span.frontmatter-section-label {
             Modals
 ────────────────────────────────────*/
 
-/* Modal Close Close Buttons */
+.modal {
+    background: var(--background-primary);
+    border: 1px solid var(--border-xsm-alt);
+    padding: 0 0;
+    overflow: hidden;
+    border-radius: var(--scale-2-1);
+}
 
+.modal.mod-community-theme {
+    padding: 0 0;
+}
+
+.modal.mod-community-theme .modal-content {
+    padding: 0 0;
+}
+
+/* Modal Contents */
+.modal-content {
+    margin-top: 0;
+}
+
+.modal-content:not(.mod-settings .modal-content, .community-plugin, .mod-community-theme .modal-content) {
+    padding: var(--scale-8-3)
+            var(--scale-8-4);
+}
+
+.modal-title:not(.mod-settings .modal-title, .mod-community-plugin .modal-title, .mod-community-theme > .modal-title) {
+    color: var(--color-yellow-300);
+    font-size: var(--font-scale-1);
+    font-weight: var(--font-normal);
+    text-transform: capitalize;
+    text-align: left;
+    border-top: 4px solid var(--color-yellow-300);
+    padding-left: var(--scale-8-3);
+    padding-right: calc(2 * var(--scale-8-3));
+}
+
+/* Modal Button Container */
+.modal-button-container {
+    margin-top: var(--scale-8-1);
+    margin-bottom: var(--scale-8-1);
+}
+
+/* Modal Close Close Buttons */
 .modal-close-button {
     right: var(--scale-2-6);
-    top: var(--scale-2-4);
+    top: var(--scale-2-6);
+    z-index: 2;
 }
 
 body:not(.no-custom-icons) .modal-close-button:before {
@@ -3940,15 +4118,23 @@ body:not(.no-custom-icons) .modal-close-button {
 }
 
 /* Modal Close Close Button Colors */
+.theme-light .modal-close-button,
+.theme-dark .modal-close-button {
+    color: var(--color-gray-20);
+}
+
+.modal-close-button:not(.mod-settings .modal-close-button, .community-plugin .modal-close-button) {
+    color: var(--color-yellow-300);
+}
 
 .theme-light .modal-close-button:hover,
 .theme-dark .modal-close-button:hover {
-    background: var(--color-gray-20);
+    color: var(--color-gray-10);
 }
 
 .theme-light .modal-close-button:active,
 .theme-dark .modal-close-button:active {
-    background: var(--color-gray-30);
+    color: var(--color-gray-70);
 }
 
 /*─────────Settings Modal──────────*/
@@ -4081,6 +4267,7 @@ body:not(.no-custom-icons) .modal-close-button {
 .modal .setting-item-description {
     color: var(--color-gray-30);
 }
+
 
 /*─────────Command, Quick Switcher etc. Modals──────────*/
 
@@ -4257,6 +4444,15 @@ input.prompt-input {
     color: var(--md-color-strikethrough);
 }
 
+.prompt-instruction-command {
+    color: var(--color-slate-300);
+    font-weight: var(--font-normal);
+    background: var(--color-gray-100);
+    padding: var(--scale-2-1) var(--scale-2-2);
+    border-radius: var(--scale-2-1);
+    border: 1px solid var(--shadow-xsm);
+}
+
 /*─────────File Explorer Search Modal─────────*/
 .suggestion-container.mod-search-suggestion {
     padding:    var(--scale-0-0)
@@ -4418,7 +4614,11 @@ input.prompt-input {
     background: var(--color-blacker);
 }
 
-/* Community Themes */
+/*───────── Community Theme Modal ──────────*/
+
+.mod-community-theme .modal-content > hr {
+    display: none;
+}
 
 .community-theme,
 .community-theme.is-selected {
@@ -4432,7 +4632,7 @@ input.prompt-input {
 }
 
 .community-theme.is-selected {
-    background: var(--color-gray-90);
+    background: var(--background-secondary);
     border: 1px solid var(--color-yellow-700);
 }
 
@@ -4451,6 +4651,15 @@ input.prompt-input {
                 var(--scale-2-2)
                 var(--scale-2-2)
                 var(--scale-2-2) !important;
+}
+
+.community-theme-filters-container {
+    padding: var(--scale-8-1)
+            var(--scale-8-3);
+}
+
+.community-theme-filters-container > .setting-item {
+    padding: 0;
 }
 
 /*────────────────────────────────────
@@ -4472,19 +4681,13 @@ input.prompt-input {
                 var(--scale-2-8)
                 var(--scale-2-2)
                 var(--scale-2-8);
-    margin-right: var(--scale-2-4);
+    margin: var(--scale-2-2)
+            var(--scale-2-2)
+            var(--scale-2-2)
+            var(--scale-2-2);
     border-radius: var(--scale-2-1);
     transition: var(--duration-fast-1)
                 var(--motion-smooth);
-}
-
-button:last-child {
-    margin-right: 0;
-}
-
-button:only-child {
-    margin-left: 0;
-    margin-right: 0;
 }
 
 .setting-item-control select {
@@ -4497,10 +4700,12 @@ button:only-child {
 
 .search-result-file-match-replace-button {
     font-size: var(--font-scale-0) !important;
-    padding:    var(--scale-2-1)
-                var(--scale-2-6)
+    padding:    var(--scale-0-0)
                 var(--scale-2-1)
-                var(--scale-2-6) !important;
+                var(--scale-0-0)
+                var(--scale-2-1) !important;
+    margin: 0 0 !important;
+    margin-right: var(--scale-2-4) !important;
 }
 
 pre button.copy-code-button {
@@ -4576,8 +4781,6 @@ pre button.copy-code-button {
 input[type='text']:not(.graph-controls input, 
 .document-search input.document-search-input,
 .document-replace input.document-replace-input) {
-    min-width: 100%;
-    width: 215px;
     padding:    var(--scale-2-2)
                 var(--scale-2-4)
                 var(--scale-2-2)
@@ -4595,8 +4798,6 @@ input.document-replace-input,
 
 textarea,
 .search-input-container input {
-    min-width: 100%;
-    width: 215px;
     padding:    var(--scale-2-2)
                 var(--scale-2-4)
                 var(--scale-2-2)
@@ -5836,6 +6037,10 @@ are many tab options on drawers + sizing fix */
     --color-cal-active-background: var(--color-gray-90);
 }
 
+table.calendar tr:nth-child(even) {
+    background: unset;
+}
+
 #calendar-container .today {
     font-weight: var(--font-bold);
 }
@@ -5845,7 +6050,7 @@ are many tab options on drawers + sizing fix */
     color: var(--color-cal-active-text);
     background: var(--color-cal-active-background);
     font-weight: var(--font-bold);
-    border: 1px solid var(--color-cyan-500);
+    outline: 1px solid var(--color-cal-active-text);
     box-shadow: 0 1px 0 1px var(--shadow-xsm);
 }
 
@@ -5853,12 +6058,14 @@ are many tab options on drawers + sizing fix */
 #calendar-container td .active.today:hover {
     color: var(--color-cal-active-text);
     background: var(--color-cal-active-background);
+    outline: 1px solid var(--color-cal-active-text);
 }
 
 #calendar-container .week-num:hover,
 #calendar-container .day:hover {
     color: var(--color-white);
     background: var(--color-gray-80);
+    outline: 1px solid var(--background-modifier-border);
 }
 
 #calendar-container .reset-button:hover,
