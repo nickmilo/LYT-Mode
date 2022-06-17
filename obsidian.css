@@ -4461,6 +4461,11 @@ input.prompt-input {
     border-radius: var(--scale-2-1);
 }
 
+.suggestion-container .suggestion-flair {
+    position: unset;
+    margin-right: 5px;
+}
+
 .suggestion-item.search-suggest-item.list-item.mod-group {
     color: var(--color-gray-10);
     padding:    var(--scale-2-2)
