@@ -1322,6 +1322,13 @@ div.search-result-container
             Status Bar
 ────────────────────────────────────*/
 
+.is-translucent .status-bar {
+    padding:    var(--scale-2-1)
+                var(--scale-2-4)
+                var(--scale-0-0)
+                var(--scale-2-4);
+}
+
 .status-bar {
     max-height: unset;
     min-width: 100%;
