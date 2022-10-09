@@ -917,6 +917,29 @@ body.theme-dark {
     margin: 0 0;
 }
 
+.view-header-title-parent .view-header-breadcrumb {
+    padding: 3px 4px;
+    border-radius: var(--radius-s);
+}
+
+.view-header-title {
+    font-size: 14px;
+    font-weight: var(--file-header-font-weight);
+    flex: 1 1 0;
+    max-width: max-content;
+    overflow: auto;
+    padding: 0 var(--size-4-1);
+    white-space: pre;
+    word-wrap: normal;
+    color: #9FA9C6;
+    scroll-padding-inline-end: 20px;
+    padding: 10px 4px;
+}
+
+.view-header-breadcrumb {
+    font-size: 14px;    
+}
+
 .workspace .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner::after {
     right: -2px;
 }
@@ -2897,8 +2920,17 @@ pre button.copy-code-button {
 /*~ Buttons Colors ~*/
 
 /* CTA Buttons */
-.theme-dark .modal button:not(.mod-cta):not(.mod-warning),
-.theme-dark .workspace button:not(.graph-controls button, .excalidraw button),
+.theme-dark .modal button:not(.mod-cta):not(.mod-warning)  {
+    background: var(--color-gray-70);
+    border: 1px solid var(--border-300);
+    box-shadow: 0 1px 0 1px var(--shadow-300);
+}
+
+.theme-dark .workspace button:not(.graph-controls button, .excalidraw button)  {
+    background: var(--color-gray-90);
+}
+
+
 .theme-dark .markdown-source-view.mod-cm6 .edit-block-button {
     background: var(--color-gray-70);
     border: 1px solid var(--border-300);
@@ -2908,12 +2940,17 @@ pre button.copy-code-button {
 .theme-dark .modal button:not(.mod-cta):not(.mod-warning):focus,
 .theme-dark .modal button:not(.mod-cta):not(.mod-warning):hover,
 .theme-dark .workspace button:not(.graph-controls button, .excalidraw button):focus,
-.theme-dark .workspace button:not(.graph-controls button, .excalidraw button):hover,
 .theme-dark .markdown-source-view.mod-cm6 .edit-block-button:focus,
 .theme-dark .markdown-source-view.mod-cm6 .edit-block-button:hover {
     background: var(--color-gray-60);
     transform: translateY(-1px);
 }
+
+.theme-dark .workspace button:not(.graph-controls button, .excalidraw button):hover {
+    background: var(--color-gray-90);
+    transform: translateY(-1px);
+}
+
 
 .theme-light .modal button:not(.mod-cta):not(.mod-warning):active,
 .theme-light .workspace button:not(.graph-controls button, .excalidraw button):active,
@@ -2966,6 +3003,11 @@ pre button.copy-code-button {
 
 .markdown-source-view.mod-cm6 .edit-block-button {
     border-radius: var(--size-2-1);
+}
+
+
+button.clickable-icon:hover {
+    color: var(--color-gray-30);
 }
 
 /*────────────────────────────────────
@@ -3491,101 +3533,6 @@ table.calendar tr:nth-child(even) {
     color: var(--color-gray-60);
 }
 
-/*────────────────────────────────────
-    Sliding Panes (Andy's Mode)
-────────────────────────────────────*/
-
-.plugin-sliding-panes-rotate-header .view-header,
-.plugin-sliding-panes-rotate-header 
-.workspace-leaf.mod-active .view-header,
-.plugin-sliding-panes-rotate-header
-.workspace-split.mod-root >
-.workspace-leaf:first-of-type:last-of-type .view-header {
-    margin-top: 0;
-}
-
-/* removes weird shadow on Note Header Title */
-.plugin-sliding-panes-rotate-header
-.view-header-title-container::before {
-    display: none;
-}
-
-/* aligns Note Header Icons with Side Dock Icons when Note Header is rotated vertically */
-body.plugin-sliding-panes-rotate-header
-.workspace > .mod-root > .workspace-leaf >
-.workspace-leaf-content > .view-header
-.view-header-icon {
-    margin-top: var(--size-4-4) !important;
-}
-
-.plugin-sliding-panes-rotate-header
-.view-header .view-action svg {
-    margin-bottom: var(--size-2-1);
-}
-
-.plugin-sliding-panes-rotate-header
-.view-header .view-action:last-of-type svg {
-    margin-bottom: var(--size-4-3);
-}
-
-.plugin-sliding-panes-rotate-header .view-header-icon,
-.plugin-sliding-panes-rotate-header .view-action {
-    margin-left: var(--size-2-1) !important;
-}
-
-.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-mixed
-.view-header-icon,
-.plugin-sliding-panes-rotate-header.plugin-sliding-select-orientation-mixed
-.view-action {
-    margin-left: calc(1px + var(--size-2-2)) !important;
-}
-
-/* don't remove !important */
-.plugin-sliding-panes-rotate-header
-.workspace .mod-root .workspace-leaf
-.workspace-leaf-content .view-header {
-    border-right: none !important;
-}
-
-.plugin-sliding-panes-rotate-header
-.workspace .mod-root
-.workspace-leaf.mod-active
-.workspace-leaf-content .view-header {
-    border-left: var(--size-2-2) 
-                solid 
-                var(--color-yellow-700) !important;
-}
-
-.plugin-sliding-panes-rotate-header
-.workspace .mod-root
-.workspace-leaf:not(.workspace-leaf.mod-active)
-.workspace-leaf-content .view-header {
-    border-left: 1px 
-                solid 
-                var(--color-gray-70) !important;
-}
-
-.plugin-sliding-panes:not(.plugin-sliding-panes-rotate-header)
-.mod-root > .workspace-leaf:not(:first-of-type) {
-    border-left: 1px 
-                solid 
-                var(--color-gray-100);
-}
-
-/* adds hint of shadow - don't remove !important */
-.plugin-sliding-panes .workspace >
-.mod-root >.workspace-leaf {
-    box-shadow: -4px 0px 4px 0px
-            rgba(0, 0, 0, 0.15)  !important;
-}
-
-/* horizontal scrollbar */
-.workspace-split.mod-vertical.mod-root::-webkit-scrollbar {
-    height: var(--scale-2-2);
-    background: var(--background-primary);
-    border-top: 1px solid
-                var(--color-gray-100);
-}
 
 /*────────────────────────────────────
                 Kanban
@@ -4185,8 +4132,19 @@ dataview.table-view-table .table-view-tbody tr {
 ──────────────────────────────────────*/
 
 .clickable-icon {
-    width: 32px;
-    height: 32px;
+        -webkit-app-region: no-drag;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--size-2-2) var(--size-2-3);
+        cursor: var(--cursor);
+        border-radius: var(--clickable-icon-radius);
+        color: var(--icon-color);
+        opacity: var(--icon-opacity);
+        transition: opacity 0.15s ease-in-out;
+        height: auto;
+    
 }
 
 body:not(.no-custom-icons) svg.any-key,
