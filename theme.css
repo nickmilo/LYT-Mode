@@ -1247,9 +1247,7 @@ Content / Active Note / Opened Notes
 }
 
 /* Comments */
-.cm-s-obsidian span.cm-comment {
-    color: var(--comment-color);
-}
+
 
 .theme-dark {
     --comment-h1: hsl(56, 44%, 76%);
