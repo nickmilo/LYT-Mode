@@ -330,7 +330,7 @@ body.theme-dark {
     --code-size: var(--font-smaller);
     --code-background: var(--background-primary-alt);
     --code-normal: var(--color-slate-500);
-    --code-comment: var(--text-faint);
+    --code-comment: var(--color-gray-15);
     --code-punctuation: var(--color-slate-900);
     --code-tag: var(--color-magenta-300);
     --code-value: var(--color-cyan-300);
