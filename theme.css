@@ -2446,6 +2446,11 @@ span.frontmatter-section-label {
                 var(--motion-heavy);
 }
 
+.graph-controls.is-close .mod-close,
+.graph-controls:not(.is-close) .mod-open {
+    display: none;
+}
+
 .mod-root .workspace-leaf-content[data-type="graph"] .graph-controls.is-close {
     background: var(--background-primary);
 }
