@@ -1994,6 +1994,7 @@ span.key.atrule {
 .frontmatter-container .frontmatter-container-header {
     border: none;
     margin-bottom: var(--size-4-2);
+    margin-left: var(--size-4-2);
 }
 
 .frontmatter-container .frontmatter-section {
