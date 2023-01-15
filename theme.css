@@ -874,11 +874,6 @@ body.theme-dark {
     padding-left: 2px;
 }
 
-.workspace-split.mod-left-split,
-.workspace-split.mod-right-split {
-    margin: 0 var(--size-4-1) 0 var(--size-4-1);
-}
-
 .theme-dark .workspace-split.mod-left-split .workspace-leaf-content,
 .theme-dark .workspace-split.mod-right-split .workspace-leaf-content {
     background: var(--color-gray-100);
