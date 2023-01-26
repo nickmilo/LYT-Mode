@@ -6,13 +6,17 @@ LYT Mode is for "Linking Your Thinking".
 It invokes sensemaking and lateral thinking.
 This is where I do my sensemaking: in LYT Mode. 
 LYT actually stands for: "Linking Your Thinking" Mode.
-It's meant to encourage sensemaking % lateral thinking. 
-I do both my creative and my analytical work in LYT Mode.
+It's meant to encourage sensemaking and lateral thinking. 
+For me, I do both my creative and analytical work in LYT Mode.
 
+- [Why Use LYT Mode?](#Why Use LYT Mode?)
 - [How to Use LYT Mode](#how-to-use-lyt-mode)
-	- [Alternative Checkboxes](#alternative-checkboxes)
-- [Supported Plugins](#supported-plugins)
 - [Features](#features)
+- [Supported Plugins](#supported-plugins)
+- [Other Stuff](#other-stuff)
+	- [Icon Bullets](#icon-bullets)
+
+
 
 ## Why Use LYT Mode?
 When a theme puts extra emphasis on making its formatting elements distinct (like bold and italics), it has a better chance at improving sensemaking.
@@ -57,9 +61,9 @@ LYT Mode should work with most plugins but this list shows plugins given extra l
 
 ## Other Stuff
 
-### Icon Bullets (aka Alternative Checkboxes)
+### Icon Bullets
 
-LYT Mode also offers additional syntax for checkboxes. These act like bullet journaling “legends”. 
+LYT Mode also offers additional syntax for Icon Bullets (aka Alternative Checkboxes). These act like bullet journaling “legends”. 
 
 | Syntax | Description |
 |--------|-------------|
