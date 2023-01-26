@@ -2,12 +2,15 @@
 
 # LYT Mode
 
-LYT Mode is for "Linking Your Thinking". 
-It invokes sensemaking and lateral thinking.
-This is where I do my sensemaking: in LYT Mode. 
-LYT actually stands for: "Linking Your Thinking" Mode.
-It's meant to encourage sensemaking and lateral thinking. 
-For me, I do both my creative and analytical work in LYT Mode.
+LYT Mode is for "Linking Your Thinking".  
+It invokes sensemaking and lateral thinking.  
+This is where I do my sensemaking: in LYT Mode.  
+LYT actually stands for: "Linking Your Thinking" Mode.  
+It's meant to encourage sensemaking and lateral thinking.  
+For me, I do both my creative and analytical work in LYT Mode.  
+
+Enjoy!  
+Nick  
 
 - [Why Use LYT Mode?](#why-use-lyt-mode)
 - [How to Use LYT Mode](#how-to-use-lyt-mode)
@@ -15,7 +18,6 @@ For me, I do both my creative and analytical work in LYT Mode.
 - [Supported Plugins](#supported-plugins)
 - [Other Stuff](#other-stuff)
 	- [Icon Bullets](#icon-bullets)
-
 
 
 ## Why Use LYT Mode?
