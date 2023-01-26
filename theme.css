@@ -1,35 +1,17 @@
 /*
-
-L Y T  M O D E
-
+LYT MODE
 Obsidian Theme v1.5
+by Nick Milo (evolved from Cybertron)
 
-by Cecilia May (commissioned by Nick Milo)
-
-────────────────────────────────────
-
-LYT Mode is for "Linking Your Thinking".
+LYT Mode is for "Linking Your Thinking". 
 It invokes sensemaking and lateral thinking.
-
-It was designed by Cecilia May (https://github.com/ceciliamay)
-on commission from Nick Milo for
-the purpose of evolving his Cybertron theme.
-
-Note from Nick:
-This is where I do my sensemaking: in LYT Mode.
-That stands for: "Linking Your Thinking" Mode.
-LYT Mode is meant to encourage sensemaking and lateral thinking.
-I do both my creative and analytical work in LYT Mode.
-
-────────────────────────────────────
-
-Support
-Cecilia's Work: https://ko-fi.com/ceciliamay
+This is where I do my sensemaking: in LYT Mode. 
+LYT actually stands for: "Linking Your Thinking" Mode.
+It's meant to encourage sensemaking % lateral thinking. 
+I do both my creative and my analytical work in LYT Mode.
 
 README: https://github.com/nickmilo/LYT-Mode
-
 License: MIT License
-
 Icons: Boxicons
 
 ────────────────────────────────────
@@ -132,6 +114,7 @@ Icons
     --color-gray-20: hsl(224, 37%, 80%); /* SB Common Text & Icons on Hover */
     --color-gray-30: hsl(224, 26%, 70%);
     --color-gray-40: hsl(224, 17%, 68%); /* Metadata Text */
+    --color-gray-48: hsl(225, 15%, 61%); /* Completed checkboxes */
     --color-gray-50: hsl(226, 10%, 47%); /* Graph Lines & Lighter Borders */
     --color-gray-60: hsl(225, 14%, 55%); /* SB Common Icons & Status Bar Text */
     --color-gray-70: hsl(225, 11%, 36%); /* SB Disabled Text & Titlebar */
@@ -323,8 +306,8 @@ body.theme-dark {
     --checkbox-color-hover: transparent;
     --checkbox-border-color: var(--border-900);
     --checkbox-border-color-hover: var(--border-900);
-    --checklist-done-decoration: line-through;
-    --checklist-done-color: var(--text-muted);
+    --checklist-done-decoration: none; /* used to be: line-through*/
+    --checklist-done-color: var(--text-faintly-muted);
 
     /* Code */
     --code-size: var(--font-smaller);
@@ -770,6 +753,7 @@ body.theme-dark {
     /* Text */
     --text-normal: var(--color-gray-20);
     --text-muted: var(--color-gray-40);
+    --text-faintly-muted: var(--color-gray-48);
     --text-faint: var(--color-gray-60);
     --text-on-accent: var(--color-white);
     --text-error: var(--color-magenta-910);
