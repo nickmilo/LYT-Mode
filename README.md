@@ -9,7 +9,7 @@ LYT actually stands for: "Linking Your Thinking" Mode.
 It's meant to encourage sensemaking and lateral thinking. 
 For me, I do both my creative and analytical work in LYT Mode.
 
-- [Why Use LYT Mode?](#Why Use LYT Mode?)
+- [Why Use LYT Mode](#Why Use LYT Mode?)
 - [How to Use LYT Mode](#how-to-use-lyt-mode)
 - [Features](#features)
 - [Supported Plugins](#supported-plugins)
