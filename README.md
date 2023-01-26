@@ -67,30 +67,7 @@ LYT Mode should work with most plugins but this list shows plugins given extra l
 
 LYT Mode also offers additional syntax for Icon Bullets (aka Alternative Checkboxes). These act like bullet journaling “legends”. 
 
-| Syntax | Description |
-|--------|-------------|
-| `- [ ]`  | Unchecked   |
-| `- [x]`  | Checked     |
-| `- [>]`  | Rescheduled |
-| `- [<]`  | Scheduled   |
-| `- [!]`  | Important   |
-| `- [-]`  | Cancelled   |
-| `- [/]`  | In Progress |
-| `- [?]`  | Question    |
-| `- [*]`  | Star        |
-| `- [n]`  | Note        |
-| `- [l]`  | Location    |
-| `- [i]`  | Information |
-| `- [I]`  | Idea        |
-| `- [S]`  | Amount      |
-| `- [p]`  | Pro         |
-| `- [c]`  | Con         |
-| `- [b]`  | Bookmark    |
-| `- [f]`  | Fire        |
-| `- [k]`  | Key         |
-| `- [w]`  | Win         |
-| `- [u]`  | Up          |
-| `- [d]`  | Down        |
+
 
 ---
 
