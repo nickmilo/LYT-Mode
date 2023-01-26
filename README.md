@@ -67,7 +67,7 @@ LYT Mode should work with most plugins but this list shows plugins given extra l
 
 LYT Mode also offers additional syntax for Icon Bullets (aka Alternative Checkboxes). These act like bullet journaling “legends”. 
 
-![icon-bullets](Icon Bullets.jpg)
+![icon-bullets](icon-bullets.jpg)
 
 
 
