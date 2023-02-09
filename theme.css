@@ -153,6 +153,7 @@ Icons
     --color-cyan-510: hsl(191, 65%, 59%); /* Nick's BrighterCyberCyan */
     --color-cyan-520: hsl(191, 57%, 59%); /* Nick's CyberCyan */
     --color-cyan-530: hsl(191, 54%, 64%); /* BODY TEXT!! Nick's FadedCyberCyan */
+    --color-cyan-533: hsl(191, 90%, 50%); /* An Alt for H3 */
     --color-cyan-540: hsl(194, 69%, 54%);
     --color-cyan-555: hsl(175, 85%, 75%); /* An Alt for Bold Text */
     --color-cyan-577: hsl(13, 52%, 80%); /* An Alt for Italic Text */
@@ -426,7 +427,7 @@ body.theme-dark {
     --heading-formatting: inherit;
     --h1-color: var(--color-yellow-900);
     --h2-color: var(--color-purple-700);
-    --h3-color: var( --color-yellow-310);
+    --h3-color: var(--color-cyan-533); /*  --color-yellow-310 */
     --h4-color: var(--color-green-710);
     --h5-color: var(--color-slate-500);
     --h6-color: var(--color-slate-700);
