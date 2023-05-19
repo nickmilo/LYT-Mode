@@ -1,13 +1,13 @@
 /*
 LYT MODE
-Obsidian Theme v1.5
+Obsidian Theme v1.6.3
 by Nick Milo (evolved from Cybertron)
 
 LYT Mode is for "Linking Your Thinking". 
 It invokes sensemaking and lateral thinking.
 This is where I do my sensemaking: in LYT Mode. 
 LYT actually stands for: "Linking Your Thinking" Mode.
-It's meant to encourage sensemaking % lateral thinking. 
+It's meant to encourage sensemaking and lateral thinking. 
 I do both my creative and my analytical work in LYT Mode.
 
 README: https://github.com/nickmilo/LYT-Mode
@@ -863,18 +863,6 @@ body.theme-dark {
 
 /*───────── Sidebar Tabs ──────────*/
 
-.mod-left-split .workspace-tab-header-container-inner,
-.mod-right-split .workspace-tab-header-container-inner {
-    padding-bottom: 0;
-}
-
-.mod-left-split .workspace-tab-header-container-inner {
-    padding-left: 0;
-}
-
-.mod-right-split .workspace-tab-header-container-inner {
-    padding-left: 2px;
-}
 
 .theme-dark .workspace-split.mod-left-split .workspace-leaf-content,
 .theme-dark .workspace-split.mod-right-split .workspace-leaf-content {
@@ -1037,13 +1025,10 @@ body.theme-dark {
 /*─────────Tree Items for Tabs──────────*/
 
 .tree-item .tree-item-self {
-    border-radius: var(--size-2-1);
     padding:    var(--size-2-1)
                 var(--size-4-2)
                 var(--size-2-1)
-                calc(4px + var(--size-4-2));
-    display: flex;
-    align-items: flex-start;
+                calc(18px + var(--size-4-2));
 }
 
 /*~ Tree Items for Tabs Colors ~*/
@@ -1051,9 +1036,6 @@ body.theme-dark {
 .tree-item-self {
     color: var(--color-gray-40);
     background: transparent;
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
-    border-left: 1px solid transparent;
 }
 
 .tree-item-self.is-clickable:hover {
@@ -1096,12 +1078,7 @@ body.theme-dark {
     top: 0;
     width: 100%;
     position: sticky;
-    justify-content: center;
-    padding:    var(--size-2-2)
-                var(--size-2-2)
-                var(--size-2-2)
-                var(--size-2-2);
-    margin-bottom: var(--size-4-2);
+    justify-content: left;
     z-index: 2;
 }
 
@@ -1112,56 +1089,15 @@ body.theme-dark {
     border-bottom: 1px solid var(--color-gray-90);
 }
 
-.theme-dark .nav-folder-title[data-path="/"]:hover {
-    color: var(--color-white) !important;
-    background: var(--color-gray-100) !important;
-    border: transparent !important;
-    border-top: 1px solid var(--color-gray-90) !important;
-    border-bottom: 1px solid var(--color-gray-90) !important;
-    cursor: default;
-}
 
 /*────────────────────────────────────
             File Navigator
 ────────────────────────────────────*/
 
-.nav-folder-title,
-.nav-file-title {
-    border: 1px solid transparent;
-    border-radius: 2px;
-    line-height: 1.1;
-    padding: var(--size-2-1) var(--size-4-2);
-}
-
-.theme-dark .nav-folder-title:hover,
-.theme-dark .nav-file-title:hover {
-    color: var(--color-cyan-500) !important;
-    background: var(--color-gray-90) !important;
-    border: 1px solid var(--color-cyan-500) !important;
-}
-
-.theme-dark .nav-folder-title:hover .nav-folder-collapse-indicator {
-    color: var(--color-cyan-500) !important;
-}
-
-/* don't remove !important */
-.theme-dark .nav-folder-title:active,
-.theme-dark .nav-file-title:active {
-    color: var(--color-gray-70) !important;
-    background: var(--color-blacker) !important;
-    border: 1px solid var(--color-gray-70) !important;
-}
-
-.theme-dark .nav-folder-title:active .nav-folder-collapse-indicator {
-    color: var(--color-gray-70) !important;
-}
-
-.theme-dark .nav-file-title.is-active {
-    color: var(--color-cyan-500);
-    font-weight: var(--font-medium);
-    background: var(--color-gray-90);
-    border: 1px solid var(--color-cyan-500);
-}
+/*── Due to v1.3.1, which changed the File Explorer, Outline, and Tag panes,
+I went ahead and deleted a lot of old CSS stuff on 2023-05-19 that used
+to live here. It doesn't seem like anything was affected, but just in case, find
+an older version if needed.───*/
 
 /*────────────────────────────────────
 ++++++++++++++++++++++++++++++++++++++
@@ -1998,6 +1934,10 @@ span.key.atrule {
     border-top: 1px solid var(--border-900);
     margin-top: 0;
     padding-top: var(--size-4-2);
+}
+
+div.tree-item-icon.collapse-icon.is-collapsed {
+    margin: Opx Opx 0px 0px;
 }
 
 span.frontmatter-section-label {
@@ -4047,6 +3987,35 @@ dataview.table-view-table .table-view-tbody tr {
 .theme-dark .hover-editor .popover-action.mod-close:hover {
     color: var(--color-cyan-500);
     background: var(--color-gray-100);
+}
+
+
+
+
+
+.nav-buttons-container, .view-actions, .workspace-tab-header-inner, .side-dock-settings, .side-dock-actions {
+    display: flex;
+    justify-content: left;
+}
+
+.workspace-tab-header-container-inner {
+    display: flex;
+    flex: 0 1 auto;
+    overflow: auto;
+    margin: 6px -5px calc(var(--tab-outline-width) * -1);
+    padding: 1px 15px 0;
+}
+
+
+.workspace-tab-header-container {
+    display: flex;
+    background-color: var(--tab-container-background);
+    height: var(--header-height);
+    border-bottom: var(--tab-outline-width) solid var(--tab-outline-color);
+    flex: 0 0 auto;
+    padding-left: 0;
+    padding-right: var(--size-4-2);
+    position: relative;
 }
 
 /*──────────────────────────────────────
