@@ -7,7 +7,7 @@ LYT Mode is for "Linking Your Thinking".
 It invokes sensemaking and lateral thinking.
 This is where I do my sensemaking: in LYT Mode. 
 LYT actually stands for: "Linking Your Thinking" Mode.
-It's meant to encourage sensemaking % lateral thinking. 
+It's meant to encourage sensemaking and lateral thinking. 
 I do both my creative and my analytical work in LYT Mode.
 
 README: https://github.com/nickmilo/LYT-Mode
@@ -863,18 +863,8 @@ body.theme-dark {
 
 /*───────── Sidebar Tabs ──────────*/
 
-.mod-left-split .workspace-tab-header-container-inner,
-.mod-right-split .workspace-tab-header-container-inner {
-    padding-bottom: 0;
-}
+/*─ Deleted stuff in 1.6.3 and again in 1.6.5 to be more in line with the default Obsidian tabs ──────────*/
 
-.mod-left-split .workspace-tab-header-container-inner {
-    padding-left: 0;
-}
-
-.mod-right-split .workspace-tab-header-container-inner {
-    padding-left: 2px;
-}
 
 .theme-dark .workspace-split.mod-left-split .workspace-leaf-content,
 .theme-dark .workspace-split.mod-right-split .workspace-leaf-content {
@@ -1037,13 +1027,10 @@ body.theme-dark {
 /*─────────Tree Items for Tabs──────────*/
 
 .tree-item .tree-item-self {
-    border-radius: var(--size-2-1);
     padding:    var(--size-2-1)
                 var(--size-4-2)
                 var(--size-2-1)
                 calc(4px + var(--size-4-2));
-    display: flex;
-    align-items: flex-start;
 }
 
 /*~ Tree Items for Tabs Colors ~*/
@@ -1051,9 +1038,6 @@ body.theme-dark {
 .tree-item-self {
     color: var(--color-gray-40);
     background: transparent;
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
-    border-left: 1px solid transparent;
 }
 
 .tree-item-self.is-clickable:hover {
@@ -1116,17 +1100,12 @@ body.theme-dark {
     top: 0;
     width: 100%;
     position: sticky;
-    justify-content: center;
-    padding:    var(--size-2-2)
-                var(--size-2-2)
-                var(--size-2-2)
-                var(--size-2-2);
-    margin-bottom: var(--size-4-2);
+    justify-content: left;
     z-index: 2;
 }
 
 .theme-dark .nav-folder-title[data-path="/"] {
-    color: var(--color-white) !important;
+    color: var(--color-gray-10) !important;
     background: var(--color-gray-100);
     border-top: 1px solid var(--color-gray-90);
     border-bottom: 1px solid var(--color-gray-90);
@@ -1147,9 +1126,9 @@ body.theme-dark {
 
 .nav-folder-title,
 .nav-file-title {
-    border: 1px solid transparent;
+    border: .9px solid transparent;  /* hid this, which causes tighter spacing and an animated effect while hovering over, which mimics that same effect with the tag and outline panes. */
     border-radius: 2px;
-    line-height: 1.1;
+    line-height: 1.0;
     padding: var(--size-2-1) var(--size-4-2);
 }
 
