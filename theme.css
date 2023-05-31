@@ -3977,6 +3977,21 @@ dataview.table-view-table .table-view-tbody tr {
     margin-bottom: 0;
 }
 
+
+/*────────────────────────────────────
+            Sortable Plugin (My attempt to get rid of the weird "countless arrows" visual)
+────────────────────────────────────*/
+
+
+th[sortable-style="sortable-asc"] {
+    background-image: none !important;
+}
+
+th[sortable-style="sortable-desc"] {
+    background-image: none !important;
+}
+
+
 /*────────────────────────────────────
             Hover Editor
 ────────────────────────────────────*/
