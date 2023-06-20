@@ -2820,8 +2820,7 @@ code.is-loaded {
     border-bottom-right-radius: var(--scale-2-1);
 }
 
-.markdown-preview-view pre,
- {
+.markdown-preview-view pre {
     border-radius: var(--scale-2-1);
 }
 
