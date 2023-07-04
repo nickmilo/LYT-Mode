@@ -386,7 +386,10 @@ body.theme-dark {
     /* Relative font sizes */
     --font-smallest: 0.8em;
     --font-smaller: 0.875em;
+    --font-smallish: 0.89em;
     --font-small: 0.933em;
+    --font-body: 1em;
+    --font-big: 1.15em; /* A sloppy hack to make the sidebars bigger, hopefully just slightly smaller than the body text */
 
     /* UI font sizes */
     --font-ui-smaller: 13px;
@@ -1076,6 +1079,7 @@ body.theme-dark {
 /* The Padding Values go clockwise: top, right, bottom, left */
 
 .tree-item-inner {
+    font-size: var(--font-big);
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 8px /* STEP 2: This one is crucial ✨ */
 } /* This POV is of the lined text itself */
@@ -1095,7 +1099,7 @@ body.theme-dark {
 /*─────────Vault Title──────────*/
 
 .nav-folder-title[data-path="/"] {
-    font-size: var(--font-small);
+   /* font-size: var(--font-small); */
     font-family: var(--font-monospace-theme);
     top: 0;
     width: 100%;
@@ -1130,6 +1134,7 @@ body.theme-dark {
     border-radius: 2px;
     line-height: 1.0;
     padding: var(--size-2-1) var(--size-4-2);
+   /* font-size: var(--font-smallish); hid this because .tree-item-inner seems to be the main one */
 }
 
 .theme-dark .nav-folder-title:hover,
