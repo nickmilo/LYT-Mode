@@ -1031,20 +1031,17 @@ body.theme-dark {
     padding: var(--size-4-2) 2px var(--size-4-2) 2px;
 }
 
-/*─────────Tree Items for Tabs──────────*/
-
-.tree-item .tree-item-self {
-    padding:    var(--size-2-1)
-                var(--size-4-2)
-                var(--size-2-1)
-                calc(4px + var(--size-4-2));
-}
 
 /*~ Tree Items for Tabs Colors ~*/
 
 .tree-item-self {
     color: var(--color-gray-40);
     background: transparent;
+    border: 1px solid var(--color-base-20);
+    padding:    var(--size-2-1)
+                var(--size-4-2)
+                var(--size-2-1)
+                var(--size-4-2);
 }
 
 .tree-item-self.is-clickable:hover {
@@ -1077,6 +1074,11 @@ body.theme-dark {
 .tree-item-flair {
     color: var(--color-white);
     background: var(--color-gray-100);
+}
+
+.tree-item-self .tree-item-icon {
+  position: relative;
+  margin:0;
 }
 
 /*─────────Test For Aligning The Outline, Tags with Tabs──────────*/
@@ -1134,19 +1136,11 @@ body.theme-dark {
 
 .nav-folder-title,
 .nav-file-title {
-    border: .9px solid transparent;  /* hid this, which causes tighter spacing and an animated effect while hovering over, which mimics that same effect with the tag and outline panes. */
     border-radius: 2px;
     line-height: 1.0;
-    padding: var(--size-2-1) var(--size-4-2);
    /* font-size: var(--font-smallish); hid this because .tree-item-inner seems to be the main one */
 }
 
-.theme-dark .nav-folder-title:hover,
-.theme-dark .nav-file-title:hover {
-    color: var(--color-cyan-500) !important;
-    background: var(--color-gray-90) !important;
-    border: 1px solid var(--color-cyan-500) !important;
-}
 
 .theme-dark .nav-folder-title:hover .nav-folder-collapse-indicator {
     color: var(--color-cyan-500) !important;
