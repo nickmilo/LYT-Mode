@@ -2634,13 +2634,17 @@ span.frontmatter-section-label {
     border-top: 1px solid var(--background-modifier-border);
 }
 
-input.prompt-input {
+/* Scoped to .prompt so the large font applies to the command palette and
+   quick switcher only. Obsidian now reuses .prompt-input for the search
+   bars inside Settings, which otherwise inherit the 24px size (fixes issue #75). */
+
+.prompt input.prompt-input {
     background-color: var(--background-modifier-form-field);
     font-size: var(--font-ui-large);
     padding: var(--size-4-2) var(--size-4-2);
 }
 
-input.prompt-input:hover {
+.prompt input.prompt-input:hover {
     border: 1px solid var(--border-300);
 }
 
