@@ -1113,19 +1113,23 @@ body.theme-dark {
 }
 
 .theme-dark .nav-folder-title[data-path="/"] {
-    color: var(--color-gray-10) !important;
     background: var(--color-gray-100);
     border-top: 1px solid var(--color-gray-90);
     border-bottom: 1px solid var(--color-gray-90);
 }
+:root:root:root .theme-dark .nav-folder-title[data-path="/"] {
+  color: var(--color-gray-10);
+}
 
 .theme-dark .nav-folder-title[data-path="/"]:hover {
-    color: var(--color-white) !important;
-    background: var(--color-gray-100) !important;
-    border: transparent !important;
-    border-top: 1px solid var(--color-gray-90) !important;
-    border-bottom: 1px solid var(--color-gray-90) !important;
     cursor: default;
+}
+:root:root:root .theme-dark .nav-folder-title[data-path="/"]:hover {
+  color: var(--color-white);
+  background: var(--color-gray-100);
+  border: transparent;
+  border-top: 1px solid var(--color-gray-90);
+  border-bottom: 1px solid var(--color-gray-90);
 }
 
 /*────────────────────────────────────
@@ -1141,27 +1145,27 @@ body.theme-dark {
    /* font-size: var(--font-smallish); hid this because .tree-item-inner seems to be the main one */
 }
 
-.theme-dark .nav-folder-title:hover,
-.theme-dark .nav-file-title:hover {
-    color: var(--color-cyan-500) !important;
-    background: var(--color-gray-90) !important;
-    border: 1px solid var(--color-cyan-500) !important;
+:root:root:root .theme-dark .nav-folder-title:hover,
+:root:root:root .theme-dark .nav-file-title:hover {
+    color: var(--color-cyan-500);
+    background: var(--color-gray-90);
+    border: 1px solid var(--color-cyan-500);
 }
 
-.theme-dark .nav-folder-title:hover .nav-folder-collapse-indicator {
-    color: var(--color-cyan-500) !important;
+:root:root:root .theme-dark .nav-folder-title:hover .nav-folder-collapse-indicator {
+    color: var(--color-cyan-500);
 }
 
 /* don't remove !important */
-.theme-dark .nav-folder-title:active,
-.theme-dark .nav-file-title:active {
-    color: var(--color-gray-70) !important;
-    background: var(--color-blacker) !important;
-    border: 1px solid var(--color-gray-70) !important;
+:root:root:root .theme-dark .nav-folder-title:active,
+:root:root:root .theme-dark .nav-file-title:active {
+    color: var(--color-gray-70);
+    background: var(--color-blacker);
+    border: 1px solid var(--color-gray-70);
 }
 
-.theme-dark .nav-folder-title:active .nav-folder-collapse-indicator {
-    color: var(--color-gray-70) !important;
+:root:root:root .theme-dark .nav-folder-title:active .nav-folder-collapse-indicator {
+    color: var(--color-gray-70);
 }
 
 .theme-dark .nav-file-title.is-active {
@@ -1786,8 +1790,8 @@ li[data-task="d"] > input:checked {
                 Callouts
 ────────────────────────────────────*/
 
-.markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] {
-    contain: initial !important;
+:root:root:root .markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] {
+    contain: initial;
 }
 
 .callout-title {
@@ -2283,7 +2287,9 @@ span.frontmatter-section-label {
 
 .mod-publish .file-tree-item {
     padding: 0 0;
-    background: none !important;
+}
+:root:root:root .mod-publish .file-tree-item {
+  background: none;
 }
 
 .mod-publish .tree-item-self .tree-item-icon {
@@ -2864,16 +2870,20 @@ input.prompt-input:hover {
 
 .menu .menu-item.selected:not(.is-warning) {
     color: var(--color-white);
-    background: var(--color-gray-80) !important;
+}
+:root:root:root .menu .menu-item.selected:not(.is-warning) {
+  background: var(--color-gray-80);
 }
 
-.menu .menu-item.selected.is-warning {
-    background: var(--color-gray-80) !important;
+:root:root:root .menu .menu-item.selected.is-warning {
+    background: var(--color-gray-80);
 }
 
 .menu .menu-item:active {
     color: var(--color-gray-60);
-    background: var(--color-blacker) !important;
+}
+:root:root:root .menu .menu-item:active {
+  background: var(--color-blacker);
 }
 
 .menu .menu-item-title {
@@ -2912,14 +2922,14 @@ input.prompt-input:hover {
     box-shadow: none;
 }
 
-.search-result-file-match-replace-button {
-    font-size: var(--font-ui-small) !important;
+:root:root:root .search-result-file-match-replace-button {
+    font-size: var(--font-ui-small);
     padding:    0
                 var(--size-2-1)
                 0
-                var(--size-2-1) !important;
-    margin: 0 0 !important;
-    margin-right: var(--size-2-4) !important;
+                var(--size-2-1);
+    margin: 0 0;
+    margin-right: var(--size-2-4);
 }
 
 pre button.copy-code-button {
@@ -3597,12 +3607,12 @@ table.calendar tr:nth-child(even) {
     border: 1px dashed var(--interactive-accent);
 }
 
-.kanban-plugin__grow-wrap>textarea,
-.kanban-plugin__grow-wrap:after {
+:root:root:root .kanban-plugin__grow-wrap>textarea,
+:root:root:root .kanban-plugin__grow-wrap:after {
     padding:    var(--size-2-2)
                 var(--size-4-2)
                 var(--size-2-2)
-                var(--size-4-2) !important;
+                var(--size-4-2);
 }
 
  
@@ -3614,20 +3624,30 @@ table.calendar tr:nth-child(even) {
 .kanban-plugin__lane-settings-button.is-enabled {
     background: var(--color-slate-900);
     margin-right: 0;
-    padding:    var(--size-2-1)
+}
+:root:root:root .view-content .kanban-plugin
+.kanban-plugin__item button[aria-label="More options"].kanban-plugin__item-postfix-button,
+:root:root:root .view-content .kanban-plugin
+.kanban-plugin__lane button[aria-label="More options"].kanban-plugin__lane-settings-button,
+:root:root:root .view-content .kanban-plugin
+.kanban-plugin__lane-settings-button.is-enabled {
+  padding:    var(--size-2-1)
                 var(--size-2-2)
                 var(--size-2-1)
-                var(--size-2-2) !important;
+                var(--size-2-2);
 }
 
 .view-content .kanban-plugin
 .kanban-plugin__item button[aria-label="Archive card"].kanban-plugin__item-prefix-button {
     background: var(--color-purple-900);
     margin-right: var(--size-4-2);
-    padding:    var(--size-2-1)
+}
+:root:root:root .view-content .kanban-plugin
+.kanban-plugin__item button[aria-label="Archive card"].kanban-plugin__item-prefix-button {
+  padding:    var(--size-2-1)
                 var(--size-2-2)
                 var(--size-2-1)
-                var(--size-2-2) !important;
+                var(--size-2-2);
 }
 
 .view-content .kanban-plugin
@@ -3649,7 +3669,6 @@ textarea.kanban-plugin__lane-input {
 .view-content .kanban-plugin
 .kanban-plugin__item-button-wrapper
 button.kanban-plugin__new-item-button {
-    font-family: var(--font-monospace-theme) !important;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: var(--text-muted);
@@ -3657,10 +3676,15 @@ button.kanban-plugin__new-item-button {
     border: none;
     border-radius: 0;
     box-shadow: none;
-    padding:    var(--size-2-1)
+}
+:root:root:root .view-content .kanban-plugin
+.kanban-plugin__item-button-wrapper
+button.kanban-plugin__new-item-button {
+  font-family: var(--font-monospace-theme);
+  padding:    var(--size-2-1)
                 var(--size-4-2)
                 var(--size-2-1)
-                var(--size-4-2) !important;
+                var(--size-4-2);
 }
 
 .view-content .kanban-plugin
@@ -3992,12 +4016,12 @@ dataview.table-view-table .table-view-tbody tr {
 ────────────────────────────────────*/
 
 
-th[sortable-style="sortable-asc"] {
-    background-image: none !important;
+:root:root:root th[sortable-style="sortable-asc"] {
+    background-image: none;
 }
 
-th[sortable-style="sortable-desc"] {
-    background-image: none !important;
+:root:root:root th[sortable-style="sortable-desc"] {
+    background-image: none;
 }
 
 
@@ -4007,8 +4031,10 @@ th[sortable-style="sortable-desc"] {
 .hover-editor {
     --he-popover-border-radius: var(--scale-2-1);
     --he-title-bar-height: 24px;
-    border: 1px solid var(--color-gray-75) !important;
     transition: border-radius var(--duration-fast-1) var(--motion-smooth);
+}
+:root:root:root .hover-editor {
+  border: 1px solid var(--color-gray-75);
 }
 
 .hover-editor.popover.hover-popover

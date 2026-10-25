@@ -1,0 +1,44 @@
+# Publishes a GitHub release whenever the version in manifest.json changes.
+# Obsidian delivers theme updates from releases: the tag must match the
+# manifest version, with theme.css and manifest.json attached.
+name: Release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - manifest.json
+      - .github/workflows/release.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Read version
+        id: v
+        run: echo "version=$(jq -r .version manifest.json)" >> "$GITHUB_OUTPUT"
+
+      - name: Create release if it doesn't exist
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.v.outputs.version }}
+        run: |
+          if gh release view "$VERSION" >/dev/null 2>&1; then
+            echo "Release $VERSION already exists, nothing to do."
+            exit 0
+          fi
+          # Notes = message of the commit that last changed manifest.json
+          git log -1 --format=%B -- manifest.json | sed '/^Co-Authored-By:/d;/^Claude-Session:/d' > notes.md
+          gh release create "$VERSION" theme.css manifest.json \
+            --title "$VERSION" \
+            --notes-file notes.md \
+            --target "$GITHUB_SHA" \
+            --latest
