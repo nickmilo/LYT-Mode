@@ -3261,12 +3261,18 @@ select,
 
 .theme-dark .notice {
     font-family: var(--font-monospace);
+    color: var(--color-white, #fff);
     background: var(--color-cyan-700);
     border: 1px solid var(--border-300);
     border-radius: var(--size-2-2);
     box-shadow: var(--shadow-m);
     transition: var(--anim-duration-fast)
                 var(--anim-motion-jumpy);
+}
+
+/* Text inside notices (e.g. "Successfully installed plugin") stays white on the teal */
+.theme-dark .notice *:not(.notice-cta):not(.notice-cta *) {
+    color: inherit;
 }
 
 /*────────────────────────────────────
@@ -5385,10 +5391,8 @@ body:not(.pt-disable-callout-styling) {
 .metadata-properties-heading {
   display: inline-flex;
   width: 100%;
-  padding: var(--size-4-2);
+  padding: var(--size-4-1) var(--size-4-2);
   margin-bottom: unset;
-  background-color: var(--color-gray-95);
-  border: var(--window-border);
 }
 .metadata-properties-heading .collapse-indicator {
   position: relative;
@@ -5422,9 +5426,16 @@ body:not(.pt-disable-callout-styling) {
 
 .cm-editor .metadata-content,
 .markdown-preview-view .metadata-content {
-  padding: var(--size-4-3) var(--size-4-2);
-  border: var(--window-border);
-  border-top: unset;
+  padding: var(--size-4-1) var(--size-4-2) var(--size-4-2);
+}
+
+/* Property names and values are plain text, not boxed inputs */
+.metadata-container .metadata-property-key-input,
+.metadata-container .metadata-property-value input:not([type='checkbox']),
+.metadata-container .metadata-property-value .metadata-input-longtext {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
 }
 
 .metadata-property-key {
@@ -5452,9 +5463,8 @@ body:not(.pt-disable-callout-styling) {
   transform: unset;
 }
 .metadata-container .metadata-add-button {
-  margin-top: var(--size-4-2);
+  margin-top: var(--size-4-1);
   margin-left: var(--size-4-1);
-  border: var(--window-border);
 }
 
 .multi-select-container {
