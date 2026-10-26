@@ -2958,7 +2958,7 @@ pre button.copy-code-button {
     box-shadow: 0 1px 0 1px var(--shadow-300);
 }
 
-.theme-dark .workspace button:not(.graph-controls button, .excalidraw button)  {
+.theme-dark .workspace button:not(.graph-controls button, .excalidraw button, .ivm button)  {
     background: var(--color-gray-90);
 }
 
@@ -2971,23 +2971,23 @@ pre button.copy-code-button {
 
 .theme-dark .modal button:not(.mod-cta):not(.mod-warning):focus,
 .theme-dark .modal button:not(.mod-cta):not(.mod-warning):hover,
-.theme-dark .workspace button:not(.graph-controls button, .excalidraw button):focus,
+.theme-dark .workspace button:not(.graph-controls button, .excalidraw button, .ivm button):focus,
 .theme-dark .markdown-source-view.mod-cm6 .edit-block-button:focus,
 .theme-dark .markdown-source-view.mod-cm6 .edit-block-button:hover {
     background: var(--color-gray-60);
     transform: translateY(-1px);
 }
 
-.theme-dark .workspace button:not(.graph-controls button, .excalidraw button):hover {
+.theme-dark .workspace button:not(.graph-controls button, .excalidraw button, .ivm button):hover {
     background: var(--color-gray-90);
     transform: translateY(-1px);
 }
 
 
 .theme-light .modal button:not(.mod-cta):not(.mod-warning):active,
-.theme-light .workspace button:not(.graph-controls button, .excalidraw button):active,
+.theme-light .workspace button:not(.graph-controls button, .excalidraw button, .ivm button):active,
 .theme-dark .modal button:not(.mod-cta):not(.mod-warning):active,
-.theme-dark .workspace button:not(.graph-controls button, .excalidraw button):active,
+.theme-dark .workspace button:not(.graph-controls button, .excalidraw button, .ivm button):active,
 .markdown-source-view.mod-cm6 .edit-block-button:active {
     background: var(--color-gray-80);
 }
@@ -3021,7 +3021,7 @@ pre button.copy-code-button {
 /* Button on Pressed */
 .theme-dark .modal button:active,
 .theme-dark .modal button:not(.mod-cta):not(.mod-warning):active,
-.theme-dark .workspace button:not(.graph-controls button, .excalidraw button):active,
+.theme-dark .workspace button:not(.graph-controls button, .excalidraw button, .ivm button):active,
 .theme-dark .graph-controls button:active,
 .markdown-source-view.mod-cm6 .edit-block-button:active,
 .search-result-file-match-destination-file:active {
