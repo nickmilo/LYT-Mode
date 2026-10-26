@@ -1104,7 +1104,7 @@ body.theme-dark {
 
 .nav-folder-title[data-path="/"] {
    /* font-size: var(--font-small); */
-    font-family: var(--font-monospace-theme);
+    font-family: var(--font-monospace);
     top: 0;
     width: 100%;
     position: sticky;
@@ -1964,7 +1964,7 @@ pre.frontmatter.language-yaml {
 
 .markdown-source-view .cm-hmd-frontmatter,
 code.language-yaml {
-    font-family: var(--font-monospace-theme);
+    font-family: var(--font-monospace);
     font-size: var(--font-small);
     font-variant-numeric: tabular-nums;
 }
@@ -2020,7 +2020,7 @@ span.key.atrule {
 }
 
 span.frontmatter-section-label {
-    font-family: var(--font-interface-theme);
+    font-family: var(--font-interface);
     font-size: var(--font-smaller);
     font-weight: var(--font-bold);
     text-transform: uppercase;
@@ -2156,7 +2156,7 @@ span.frontmatter-section-label {
 ────────────────────────────────────*/
 
 .reveal {
-    font-family: var(--font-interface-theme);
+    font-family: var(--font-interface);
 }
 
 /* Slides Markdown */
@@ -2630,7 +2630,7 @@ span.frontmatter-section-label {
 /*─────────Command, Quick Switcher etc. Modals──────────*/
 
 .prompt {
-    font-family: var(--font-interface-theme);
+    font-family: var(--font-interface);
     padding:    0;
     border-top-left-radius: var(--size-2-2);
     border-top-right-radius: var(--size-2-2);
@@ -2658,7 +2658,7 @@ input.prompt-input:hover {
 
 .suggestion-item,
 .suggestion .suggestion-item {
-    font-family: var(--font-interface-theme);
+    font-family: var(--font-interface);
     border-radius: 0;
     padding:    var(--size-2-1)
                 var(--size-4-5);
@@ -2674,7 +2674,7 @@ input.prompt-input:hover {
 }
 
 .suggestion-item.mod-complex .suggestion-hotkey {
-    font-family: var(--font-monospace-theme);
+    font-family: var(--font-monospace);
     font-size: var(--font-smaller);
     padding:    var(--size-2-1)
                 var(--size-4-3)
@@ -2695,7 +2695,7 @@ input.prompt-input:hover {
 .suggestion-prefix {
     color: var(--text-muted);
     font-size: var(--font-small);
-    font-family: var(--font-monospace-theme);
+    font-family: var(--font-monospace);
     font-style: italic;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -2716,7 +2716,7 @@ input.prompt-input:hover {
 
 .theme-dark kbd,
 .theme-dark .setting-hotkey {
-    font-family: var(--font-monospace-theme);
+    font-family: var(--font-monospace);
     color: var(--color-slate-300);
     background: var(--color-gray-100);
     border: 1px solid var(--shadow-300);
@@ -2913,7 +2913,7 @@ input.prompt-input:hover {
 /* don't remove !important */
 .theme-light button,
 .theme-dark button {
-    font-family: var(--font-interface-theme);
+    font-family: var(--font-interface);
     font-size: var(--font-ui-small);
     border-radius: var(--size-2-1);
     transition: var(--anim-duration-superfast)
@@ -3055,7 +3055,7 @@ input.document-search-input,
 input.document-replace-input,
 input.prompt-input {
     font-size: calc(2px + var(--font-ui-medium));
-    font-family: var(--font-interface-theme);
+    font-family: var(--font-interface);
     border-radius: var(--size-2-1);
     transition: var(--anim-duration-superfast)
                 var(--anim-motion-smooth);
@@ -3220,7 +3220,7 @@ select,
 }
 
 .theme-dark .empty-state-action {
-    font-family: var(--font-monospace-theme);
+    font-family: var(--font-monospace);
     font-size: var(--font-ui-small);
     line-height: var(--line-height);
     text-transform: uppercase;
@@ -3260,7 +3260,7 @@ select,
 ────────────────────────────────────*/
 
 .theme-dark .notice {
-    font-family: var(--font-monospace-theme);
+    font-family: var(--font-monospace);
     background: var(--color-cyan-700);
     border: 1px solid var(--border-300);
     border-radius: var(--size-2-2);
@@ -3438,18 +3438,18 @@ code::-webkit-scrollbar-thumb {
 }
 
 #calendar-container .right-nav {
-    font-family: var(--font-monospace-theme);
+    font-family: var(--font-monospace);
     margin-right: var(--size-4-2);
 }
 
 #calendar-container .title span {
-    font-family: var(--font-monospace-theme);
+    font-family: var(--font-monospace);
     font-size: var(--font-small);
     text-transform: uppercase;
 }
 
 #calendar-container .title span.month {
-    font-family: var(--font-monospace-theme);
+    font-family: var(--font-monospace);
     font-size: var(--font-small);
     font-weight: var(--font-bold);
     text-transform: uppercase;
@@ -3457,7 +3457,7 @@ code::-webkit-scrollbar-thumb {
 
 #calendar-container .day,
 #calendar-container .week-num {
-    font-family: var(--font-monospace-theme);
+    font-family: var(--font-monospace);
     padding:    var(--size-2-2)
                 var(--size-2-3)
                 var(--size-2-2)
@@ -3686,7 +3686,7 @@ button.kanban-plugin__new-item-button {
 :root:root:root .view-content .kanban-plugin
 .kanban-plugin__item-button-wrapper
 button.kanban-plugin__new-item-button {
-  font-family: var(--font-monospace-theme);
+  font-family: var(--font-monospace);
   padding:    var(--size-2-1)
                 var(--size-4-2)
                 var(--size-2-1)
@@ -3751,12 +3751,12 @@ body .excalidraw {
 }
 
 .workspace .excalidraw .reset-zoom-button {
-    font-family: var(--font-monospace-theme);
+    font-family: var(--font-monospace);
     font-size: var(--font-medium);
 }
 
 .workspace .excalidraw .color-picker-input {
-    font-family: var(--font-interface-theme);
+    font-family: var(--font-interface);
     font-size: var(--font-medium);
 }
           
@@ -3788,7 +3788,7 @@ body .excalidraw .Island h3,
 body .excalidraw .Island legend,
 body .excalidraw .Island label.control-label {
     color: var(--color-gray-70);
-    font-family: var(--font-monospace-theme);
+    font-family: var(--font-monospace);
     text-transform: uppercase;
 }
 
@@ -3903,8 +3903,8 @@ body.hider-frameless .workspace-split.mod-left-split >
                 Dataview
 ────────────────────────────────────*/
 /* Dataview Tables */
-/* Source View */
-.markdown-source-view.mod-cm6 .cm-embed-block {
+/* Source View (not Obsidian's own tables, which need their padding for the row/column handles and add buttons) */
+.markdown-source-view.mod-cm6 .cm-embed-block:not(.cm-table-widget) {
     padding: 0;
 }
 
