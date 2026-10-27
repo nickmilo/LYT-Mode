@@ -2049,13 +2049,13 @@ span.frontmatter-section-label {
 
 .frontmatter-container a.tag:hover {
     color: var(--tag-color-hover);
-    background: var(--tag-background-hover)
+    background: var(--tag-background-hover);
     border: 1px solid var(--tag-border-color-hover);
 }
 
 .frontmatter-container a.tag:active {
     color: var(--tag-color-hover);
-    background: var(--tag-background-hover)
+    background: var(--tag-background-hover);
     border: 1px solid var(--tag-border-color-hover);
     box-shadow: 0px 2px 0px 0px
                 var(--shadow-300) inset,
