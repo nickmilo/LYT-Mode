@@ -2042,7 +2042,7 @@ span.frontmatter-section-label {
 
 .frontmatter-container a.tag {
     color: var(--tag-color);
-    background: var(--tag-background)
+    background: var(--tag-background);
     border: 1px solid var(--border-900);
     box-shadow: 0px 1px 0px var(--shadow-300);
 }
