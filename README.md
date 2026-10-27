@@ -36,7 +36,7 @@ Make sure you're in dark mode. I know, it's ironically called "LYT" mode.
 
 1. Evolved color palette from Cybertron comparison
 	- Special Colors for Markdown Emphasis
-2. Beautiful readable fonts originally made for each other: **DM Sans & DM Mono**
+2. Beautiful readable fonts originally made for each other: **DM Sans & DM Mono** (install DM Mono for code blocks to match).
 3. Support for both **Mobile and Desktop**
 4. Support for all Obsidian views: Legacy, Live Preview, and Reading
 5. Custom Icons
